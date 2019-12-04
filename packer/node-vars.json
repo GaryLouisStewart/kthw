@@ -3,7 +3,7 @@
     "region": "eu-west-2",
     "source_ami": "ami-0eab3a90fc693af19",
     "instance_type": "t2.micro",
-    "ssh_username": "ec2-user",
+    "ssh_username": "centos",
     "ami_name": "kube-worker-node",
     "ami_owner": "679593333241"
 }
