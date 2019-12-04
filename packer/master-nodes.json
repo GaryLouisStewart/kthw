@@ -5,9 +5,11 @@
 		"source_ami": "",
 		"instance_type": "",
 		"ssh_username": "",
+		"ssh_keypair_name": "",
+		"ssh_private_key_file":"",
 		"type": "",
-    "ami_name": "",
-    "ami_owner": ""
+    	"ami_name": "",
+    	"ami_owner": ""
 	},
 
 	"builders": [{
@@ -17,6 +19,8 @@
 		"source_ami": "{{user `source_ami`}}",
 		"instance_type": "{{user `instance_type`}}",
 		"ssh_username": "{{user `ssh_username`}}",
+		"ssh_keypair_name":"{{user `ssh_keypair_name`}}",
+		"ssh_private_key_file":"{{user `ssh_private_key_file`}}",
 		"ami_name": "{{user `ami_name`}}-{{timestamp}}",
 		"source_ami_filter": {
 			"owners": ["{{user `ami_owner`}}"],

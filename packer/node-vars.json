@@ -4,6 +4,8 @@
     "source_ami": "ami-0eab3a90fc693af19",
     "instance_type": "t2.micro",
     "ssh_username": "centos",
+    "ssh_keypair_name": "worker-nodes",
+    "ssh_private_key_file":"worker-nodes.key",
     "ami_name": "kube-worker-node",
     "ami_owner": "679593333241"
 }
