@@ -20,7 +20,7 @@ function terraform_destroy() {
 }
 
 function terraform_output() {
-    if [ "$#" -lt 1 ]; then
+    if [ "$#" -lt 2 ]; then
      echo "Please select a resource to output or see usage with tf_action -h"
     else 
       terraform output "$@"
@@ -40,23 +40,23 @@ function usage() {
 opt=$1
 case $opt
 in
-  plan)
+    -p| --plan)
     terraform_plan
     ;;
-  apply)
+    -a|--apply)
     terraform_apply
     ;;
-  destroy)
+    -d|--destroy)
     terraform_destroy
     ;;
-  output)
+    -o|--output)
     terraform_output "$1"
     ;;
-  help)
+    -h|--help)
     usage
     ;;
   *)
-    echo "For more information run, tf_action -help"
+    echo "Command unknown, for more information run, tf_action --help"
     exit
         ;;
 esac

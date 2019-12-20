@@ -11,11 +11,11 @@ directory=logs
 [[ -d $(pwd)/.logs ]] || mkdir -p "$(pwd)"./logs
 
 function packer_build() {
-    if [ "$#" -lt 2 ]; then
+    if [[ "$#" -lt 2 ]]; then
       echo "ERROR: please specify the two variables files"
     else
       echo "Building packer image: ...........%"
-      packer build -timestamp-ui -var-file "$2" "$3"
+      packer build -timestamp-ui -var-file "$1" -var-file "$2"
     fi
 }
 
@@ -35,7 +35,7 @@ case $opt
 in
 
 build|-b)
-    packer_build "$1" "$2"
+    packer_build "$2" "$3"
     ;;
 rmdir|-rm)
     remove_old_dir
