@@ -1,4 +1,5 @@
 ./terraform/*
+cluster/.terraform
 ./cluster/.terraform/*
 .logs
 *.tfstate

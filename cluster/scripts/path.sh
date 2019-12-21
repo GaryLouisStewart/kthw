@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export TF_VARS="kthw/"
+export TF_VARS="vars"
