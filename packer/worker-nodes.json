@@ -6,7 +6,7 @@
 		"instance_type": "",
 		"ssh_username": "",
 		"type": "",
-        "ami_name": "",
+        	"ami_name": "",
 		"ami_owner": "",
 		"ssh_keypair_name":"",
 		"ssh_private_key_file":""
