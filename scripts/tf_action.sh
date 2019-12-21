@@ -1,24 +1,32 @@
 #!/bin/bash
-# This script will allow us to run terraform actions and outputs logging into
-## the logs folder with each of the logs labelled to their respective actio
-set -x 
-DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
-../cluster/scripts/path.sh
+# This script will allow us to run terraform actions and outputs logging into
+## the logs folder for the terraform plan function.
+
+# uncomment below to enable debug syntax in script.
+# set -x
+
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source "$DIR/../cluster/scripts/path.sh"
 
 # create a <CWD>/.logs folder for terraform to store logs in.
 [[ -d "$(pwd)/.logs" ]] || mkdir -p "$(pwd)/.logs"
+
+function tf_init() {
+  terraform init
+}
 
 function terraform_plan() {
 	terraform plan -out=.logs/terraform-plan-log-"$DATE"
 }
 
 function terraform_apply() {
-	terraform apply --var-file="$PATH"/defaults.tf  --var-file="$PATH_2"/common.json -out=.logs/terraform-apply-log-"$DATE"
+	terraform apply -var-file "$TF_VARS/common.json"
 }
 
 function terraform_destroy() {
-	terraform destroy --var-file=../cluster/defaults.tf  --var-file=../cluster/kthw/common.json -out=.logs/terraform-destroy-log-"$DATE"
+	terraform destroy -var-file "$TF_VARS/common.json"
 }
 
 function terraform_output() {
@@ -32,18 +40,22 @@ function terraform_output() {
 }
 
 function usage() {
-    echo "usage: [-a, --apply | -p, --plan | -d, --destroy | -o, --output | -h, --help]"
-    echo "  -a, --apply   runs a terraform apply, e.g. [ \$tf_action apply ]"
-    echo "  -p, --plan    runs a terraform plan, [ \$tf_action plan ]"
-    echo "  -d, --destory runs a terraform destroy, [ \$tf_action destroy ]"
-    echo "  -o, --output  runs a terraform output, [ \$tf_action output <resource-name> ]"
-    echo "  -h, --help    display help, [ \$tf_action help ]"
+    echo "usage: [-i, --init, | -a, --apply | -p, --plan | -d, --destroy | -o, --output | -h, --help]"
+    echo "  -i  --init    runs a terraform init, e.g. [ \$tf_action -i]"
+    echo "  -a, --apply   runs a terraform apply, e.g. [ \$tf_action -a ]"
+    echo "  -p, --plan    runs a terraform plan, [ \$tf_action plan -p]"
+    echo "  -d, --destory runs a terraform destroy, [ \$tf_action -d ]"
+    echo "  -o, --output  runs a terraform output, [ \$tf_action -o <resource-name> ]"
+    echo "  -h, --help    display help, [ \$tf_action -hw ]"
     exit 1
 }
 
 opt=$1
 case $opt
 in
+    -i| --init)
+    tf_init
+    ;;
     -p| --plan)
     terraform_plan
     ;;
