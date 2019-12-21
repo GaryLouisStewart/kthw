@@ -19,7 +19,7 @@ function tf_init() {
 }
 
 function terraform_plan() {
-	terraform plan -out=.logs/terraform-plan-log-"$DATE"
+	terraform plan -var-file "$TF_VARS/common.json" -out=.logs/terraform-plan-log-"$DATE"
 }
 
 function terraform_apply() {

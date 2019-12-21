@@ -9,7 +9,7 @@
         "Environment": "Development",
         "Platform": "centos7",
         "Application": "Bastion Host",
-        "Service": "Bastion host",
+        "Service": "INBP",
         "Terraformed": "true",
         "Created_by": "Gary"
     },
