@@ -1,0 +1,9 @@
+{
+    "provider": {
+        "region": "eu-west-2",
+        "shared_creds_file": "~/.aws/credentials",
+        "aws_profile": "gary"
+    },
+    "stuff" : "changeme"
+
+}

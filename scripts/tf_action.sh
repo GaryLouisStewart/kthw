@@ -1,22 +1,24 @@
 #!/bin/bash
 # This script will allow us to run terraform actions and outputs logging into
 ## the logs folder with each of the logs labelled to their respective actio
-
+set -x 
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
+../cluster/scripts/path.sh
+
 # create a <CWD>/.logs folder for terraform to store logs in.
-[[ -d $(pwd)/.logs ]] || mkdir -p "$(pwd)"/.logs
+[[ -d "$(pwd)/.logs" ]] || mkdir -p "$(pwd)/.logs"
 
 function terraform_plan() {
-	terraform plan -out=./logs/terraform-plan-log-"$DATE"
+	terraform plan -out=.logs/terraform-plan-log-"$DATE"
 }
 
 function terraform_apply() {
-	terraform apply --var-file=../terraform.tfvars -out=./logs/terraform-apply-log-"$DATE"
+	terraform apply --var-file="$PATH"/defaults.tf  --var-file="$PATH_2"/common.json -out=.logs/terraform-apply-log-"$DATE"
 }
 
 function terraform_destroy() {
-	terraform destroy --var-file=../terraform.tfvars -out=./logs/terraform-destroy-log-"$DATE"
+	terraform destroy --var-file=../cluster/defaults.tf  --var-file=../cluster/kthw/common.json -out=.logs/terraform-destroy-log-"$DATE"
 }
 
 function terraform_output() {
