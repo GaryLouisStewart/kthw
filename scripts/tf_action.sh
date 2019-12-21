@@ -22,6 +22,8 @@ function terraform_destroy() {
 function terraform_output() {
     if [ "$#" -lt 2 ]; then
      echo "Please select a resource to output or see usage with tf_action -h"
+     echo "$0: fatal error:" "$@" >&2
+     exit 1
     else 
       terraform output "$@"
     fi
