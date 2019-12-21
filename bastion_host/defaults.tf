@@ -15,3 +15,42 @@ variable "vpc_vars" {
     type = "map"
     default = {}
 }
+
+variable "bastion_ami_name" {
+    description = "AMI to use for the EC2 instance that will be our bastion host"
+    type = "string"
+    default = ""
+}
+
+variable "bastion_ssh_keypair" {
+    description = "SSH keypair to use for our bastion host"
+    type = "string"
+    default = ""
+}
+
+variable "aws_instance_type" {
+    description = "The aws instance type to use e.g. t2.micro"
+    type = "string"
+    default = ""
+}
+
+variable "associate_bastion_public_ip" {
+    description = "Whether or not to allow a public IP address for the EC2 bastion host"
+    default  = false
+}
+
+variable "cidr_blocks_bastion" {
+    description = "The CIDR blocks to allow ssh access to the bastion host"
+    type = "list"
+    default = []
+}
+
+variable "cidr_block_bastion_insecure" {
+    description = "Optional CIDR Range allowing insecure ssh access into our instance"
+    default = false
+}
+
+variable "cidr_block_bastion_secure" {
+    description = "Optional CIDR Range allowing secure ssh access into our instance"
+    default = false
+}
