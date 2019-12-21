@@ -47,7 +47,7 @@ function usage() {
     echo "  -p, --plan    runs a terraform plan, [ \$tf_action plan -p]"
     echo "  -d, --destory runs a terraform destroy, [ \$tf_action -d ]"
     echo "  -o, --output  runs a terraform output, [ \$tf_action -o <resource-name> ]"
-    echo "  -h, --help    display help, [ \$tf_action -hw ]"
+    echo "  -h, --help    display help, [ \$tf_action -h ]"
     exit 1
 }
 
