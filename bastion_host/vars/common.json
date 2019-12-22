@@ -26,7 +26,7 @@
     "bastion_ssh_keypair": "inbp-bastion-kthw",
     "aws_instance_type": "t2.micro",
     "associate_bastion_public_ip": true,
-    "cidr_blocks_bastion": ["0.0.0.0/0"],
+    "cidr_block_egress": ["0.0.0.0/0"],
     "create_bastion_insecure": true,
     "create_bastion_secure": false
 }

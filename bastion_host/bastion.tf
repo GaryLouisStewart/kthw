@@ -1,11 +1,11 @@
-resource "aws_vpc" "bastion_vpc" {
+resource "aws_vpc" "kthw_vpc" {
     cidr_block             = "${var.vpc_vars["cidr_block"]}"
     enable_dns_support     = "${var.vpc_vars["enable_dns_support"]}"
     enable_dns_hostnames   = "${var.vpc_vars["enable_dns_hostnames"]}"
     enable_classiclink     = "${var.vpc_vars["enable_classiclink"]}"
     instance_tenancy       = "${var.vpc_vars["instance_tenancy"]}"
     tags = "${merge(map(
-        "Name", "kthw-vpc"
+        "Name", "Kubernetes the hard way"
     ), var.common_tags)}"
 }
 
@@ -19,13 +19,13 @@ resource "aws_instance" "bastion" {
 
 resource "aws_security_group" "bastion-inbp" {
     name = "bastion-security-group"
-    vpc_id = "${aws_vpc.default_vpc.id}"
+    vpc_id = "${aws_vpc.kthw_vpc.id}"
 
     egress {
         protocol    = -1
         from_port   = 0
         to_port     = 0
-        cidr_blocks = "${var.cidr_blocks_bastion}"
+        cidr_blocks = "${var.cidr_block_egress}"
     }
 }
 
