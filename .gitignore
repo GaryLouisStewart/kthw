@@ -1,5 +1,8 @@
 ./terraform/*
 cluster/.terraform
 ./cluster/.terraform/*
+bastion_host/.terraform
 .logs
 *.tfstate
+crash.log
+lock.json

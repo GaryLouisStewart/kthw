@@ -27,6 +27,6 @@
     "aws_instance_type": "t2.micro",
     "associate_bastion_public_ip": true,
     "cidr_blocks_bastion": ["0.0.0.0/0"],
-    "cidr_block_bastion_insecure": true,
-    "cidr_block_bastion_secure": false
+    "create_bastion_insecure": true,
+    "create_bastion_secure": false
 }

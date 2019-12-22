@@ -45,12 +45,12 @@ variable "cidr_blocks_bastion" {
     default = []
 }
 
-variable "cidr_block_bastion_insecure" {
+variable "create_bastion_insecure" {
     description = "Optional CIDR Range allowing insecure ssh access into our instance"
     default = false
 }
 
-variable "cidr_block_bastion_secure" {
+variable "create_bastion_secure" {
     description = "Optional CIDR Range allowing secure ssh access into our instance"
     default = false
 }

@@ -30,7 +30,7 @@ resource "aws_security_group" "bastion-inbp" {
 }
 
 resource "aws_security_group_rule" "bastion-inbp-secure" {
-  count             = "${var.cidr_block_bastion_secure ? 1 : 0}"
+  count             = "${var.create_bastion_secure ? 1 : 0}"
   cidr_blocks       = "${var.cidr_blocks_bastion}"
   description       = "Allow traffic into the bastion instance from a secure source e.g. VPN server"
   from_port         = 22
@@ -45,7 +45,7 @@ resource "aws_security_group_rule" "bastion-inbp-secure" {
 #################################################
 
 resource "aws_security_group_rule" "bastion-inbp-insecure" {
-  count             = "${var.cidr_block_bastion_insecure ? 1 : 0}"
+  count             = "${var.create_bastion_insecure ? 1 : 0}"
   cidr_blocks       = ["${chomp(data.http.myipaddr.body)}/32"]
   description       = "Allow traffic into bastion instance from our workstation"
   from_port         = 22
