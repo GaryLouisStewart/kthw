@@ -39,7 +39,7 @@ variable "associate_bastion_public_ip" {
     default  = false
 }
 
-variable "cidr_block_egress" {
+variable "cidr_block_bastion" {
     description = "The CIDR blocks to allow ssh access to the bastion host"
     type = "list"
     default = []

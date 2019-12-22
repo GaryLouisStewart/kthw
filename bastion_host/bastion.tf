@@ -15,6 +15,7 @@ resource "aws_instance" "bastion" {
     instance_type               = "${var.aws_instance_type}"
     security_groups             = ["${aws_security_group.bastion-inbp.name}"]
     associate_public_ip_address = "${var.associate_bastion_public_ip}"
+    vpc_security_group_ids      = ["${aws_security_group.bastion-inbp.id}"]
 }
 
 resource "aws_security_group" "bastion-inbp" {
@@ -25,13 +26,13 @@ resource "aws_security_group" "bastion-inbp" {
         protocol    = -1
         from_port   = 0
         to_port     = 0
-        cidr_blocks = "${var.cidr_block_egress}"
+        cidr_blocks = ["0.0.0.0/0"]
     }
 }
 
 resource "aws_security_group_rule" "bastion-inbp-secure" {
   count             = "${var.create_bastion_secure ? 1 : 0}"
-  cidr_blocks       = "${var.cidr_blocks_bastion}"
+  cidr_blocks       = "${var.cidr_block_bastion}"
   description       = "Allow traffic into the bastion instance from a secure source e.g. VPN server"
   from_port         = 22
   protocol          = "tcp"
