@@ -30,7 +30,7 @@
 
 ![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/bastion_host/src/common/images/tf_plan.png?raw=true)
 
-- [] Terraform Apply, Intializes a directory, applies the planned terraform configuration to our AWS account.
+- [ ] Terraform Apply, Intializes a directory, applies the planned terraform configuration to our AWS account.
 - `./scripts/tf_actions.sh -a`
 
 ![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/bastion_host/src/common/images/tf_apply.png?raw=true)
