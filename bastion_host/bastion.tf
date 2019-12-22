@@ -5,7 +5,7 @@ resource "aws_vpc" "bastion_vpc" {
     enable_classiclink     = "${var.vpc_vars["enable_classiclink"]}"
     instance_tenancy       = "${var.vpc_vars["instance_tenancy"]}"
     tags = "${merge(map(
-        "Name", "Bastion-INBP"
+        "Name", "kthw-vpc"
     ), var.common_tags)}"
 }
 
@@ -19,7 +19,7 @@ resource "aws_instance" "bastion" {
 
 resource "aws_security_group" "bastion-inbp" {
     name = "bastion-security-group"
-    vpc_id = "${aws_vpc.bastion_vpc.id}"
+    vpc_id = "${aws_vpc.default_vpc.id}"
 
     egress {
         protocol    = -1
