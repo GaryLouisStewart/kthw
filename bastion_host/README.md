@@ -17,7 +17,7 @@
 ---
 
 
-- [] Terraform init, Intializes a directory, downloads all relative plugins, files and packages needed by terraform and checks/setsup credentials with our provider AWS.
+- [ ] Terraform init, Intializes a directory, downloads all relative plugins, files and packages needed by terraform and checks/setsup credentials with our provider AWS.
 - `../scripts/tf_actions.sh -i`
 
 ![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/bastion_host/src/common/images/tf_init.png?raw=true)
