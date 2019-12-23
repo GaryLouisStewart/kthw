@@ -6,3 +6,5 @@ bastion_host/.terraform
 *.tfstate
 crash.log
 lock.json
+*.key
+*.key.pub
