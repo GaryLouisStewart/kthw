@@ -28,5 +28,12 @@
     "associate_bastion_public_ip": true,
     "cidr_block_bastion": ["0.0.0.0/0"],
     "create_bastion_insecure": true,
-    "create_bastion_secure": false
+    "create_bastion_secure": false,
+
+    "vpc_endpoint_ec2": {
+        "service_name": "com.amazonaws.eu-west-2.ec2",
+        "endpoint_type": "Interface",
+        "private_dns": true
+    },
+    "create_vpc_endpoint": false
 }

@@ -54,3 +54,15 @@ variable "create_bastion_secure" {
     description = "Optional CIDR Range allowing secure ssh access into our instance"
     default = false
 }
+
+variable "vpc_endpoint_ec2" {
+    description = "optional vpc endpoint to further secure services running under ec2 to witin AWS only."
+    type = "map"
+    default = {}
+}
+
+variable "create_vpc_endpoint" {
+    description = "Whether to create a VPC endpoint or not"
+    default = false
+}
+ 
