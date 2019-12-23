@@ -9,7 +9,7 @@
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-source "$DIR/../cluster/scripts/path.sh" # although the shell complains ( used shellcheck to lint ) this is useful as it allows us to point this to any dynamic path on the system. 
+source "$DIR/../scripts/path.sh" # although the shell complains ( used shellcheck to lint ) this is useful as it allows us to point this to any dynamic path on the system. 
 
 # create a <CWD>/.logs folder for terraform to store logs in.
 [[ -d "$(pwd)/.logs" ]] || mkdir -p "$(pwd)/.logs"
