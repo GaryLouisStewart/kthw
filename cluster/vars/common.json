@@ -3,6 +3,34 @@
         "region": "eu-west-2",
         "shared_creds_file": "~/.aws/credentials",
         "aws_profile": "gary"
-    }
+    },
+
+    "kube_ami_names": {
+        "master": "kthw-master",
+        "worker": "kthw-worker"
+    },
+
+    "node_count": {
+        "master": 2,
+        "worker": 3
+    },
+
+    "common_tags": {
+        "Environment": "Development",
+        "Platform": "Ubuntu 16.06 xenial",
+        "Application": "Kubernetes cluster",
+        "Service": "kubernetes",
+        "Terraformed": "true",
+        "Created_by": "Gary"
+    },
+
+    "vpc_vars": {
+        "cidr_block": "10.0.0.15/24",
+        "enable_dns_support": true,
+        "enable_dns_hostnames": true,
+        "enable_classiclink": false,
+        "instance_tenancy": "default"
+    },
+    "cluster_name": "kthw"
 
 }
