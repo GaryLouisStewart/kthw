@@ -65,4 +65,3 @@ variable "create_vpc_endpoint" {
     description = "Whether to create a VPC endpoint or not"
     default = false
 }
- 

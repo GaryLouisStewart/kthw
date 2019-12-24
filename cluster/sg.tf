@@ -45,7 +45,8 @@ resource "aws_security_group" "kubernetes_workers" {
 #### Kubernetes security group rules ####
 #########################################
 
-resource "aws_security_group_rule" "kubernetes_masters" {
+## masters
+resource "aws_security_group_rule" "kube_master_secure" {
   count             = "${var.kubemaster_secure_ingress ? length(var.kubemaster_ingress_ports)  :0}"
   cidr_blocks       = ["${length(var.kubemaster_cidr_ingress_access)}"]
   description       = "Allow workstation to communicate with the cluster API Server"
@@ -55,3 +56,17 @@ resource "aws_security_group_rule" "kubernetes_masters" {
   to_port           = "${element(var.kubemaster_ingress_ports, count.index)}"
   type              = "ingress"
 }
+
+resource "aws_security_group_rule" "kube_master_insecure" {
+  count             = "${var.kubemaster_insecure_ingress ? length(var.kubemaster_ingress_ports)  :0}"
+  cidr_blocks       = ["${chomp(data.http.myipaddr.body)}/32"]
+  description       = "Allow workstation to communicate with the cluster API Server"
+  from_port         = "${element(var.kubemaster_ingress_ports, count.index)}"
+  protocol          = "tcp"
+  security_group_id = "${aws_security_group.kubernetes_masters.id}"
+  to_port           = "${element(var.kubemaster_ingress_ports, count.index)}"
+  type              = "ingress"
+}
+
+## workers
+
