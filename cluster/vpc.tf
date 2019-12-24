@@ -6,6 +6,6 @@ resource "aws_vpc" "kubernetes_vpc" {
     instance_tenancy       = "${var.vpc_vars["instance_tenancy"]}"
     tags = "${merge(map(
         "Name", "Kubernetes cluster",
-        "kubernetes.io/cluster/${var.cluster-name}", "shared"
+        "kubernetes.io/cluster/${var.cluster_name}", "shared"
     ), var.common_tags)}"
 }

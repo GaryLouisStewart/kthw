@@ -5,7 +5,7 @@
         "aws_profile": "gary"
     },
 
-    "kube_ami_names": {
+    "kube_amis": {
         "master": "kthw-master",
         "worker": "kthw-worker"
     },
@@ -13,6 +13,11 @@
     "node_count": {
         "master": 2,
         "worker": 3
+    },
+
+    "kube_node_types": {
+        "master": "t2.micro",
+        "worker": "t2.micro"
     },
 
     "common_tags": {
@@ -31,6 +36,9 @@
         "enable_classiclink": false,
         "instance_tenancy": "default"
     },
-    "cluster_name": "kthw"
+    "cluster_name": "kthw",
+    "aws_keypair_name": "kthw-demo",
+    "kubemaster_cidr_ingress_access": ["0.0.0.0/0"],
+    "kubemaster_ingress_ports": ["443"]
 
 }
