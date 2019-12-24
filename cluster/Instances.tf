@@ -3,6 +3,7 @@ resource "aws_instance" "kubernetes_master" {
     ami                         = "${var.kube_amis["master"]}"
     key_name                    = "${var.aws_keypair_name["master"]}"
     instance_type               = "${var.kube_node_type["master"]}"
+    subnet_id                   = "${element(aws_subnet.kube_master_subnet.*.id, count.index)}"
     security_groups             = ["${aws_security_group.kubernetes_masters.name}"]
     associate_public_ip_address = "${var.associate_pub_ip_master}"
     vpc_security_group_ids      = ["${aws_security_group.kubernetes_masters.id}"]
@@ -17,6 +18,7 @@ resource "aws_instance" "kubernetes_node" {
     ami                         = "${var.kube_amis["worker"]}"
     key_name                    = "${var.aws_keypair_name["worker"]}"
     instance_type               = "${var.kube_node_type["worker"]}"
+    subnet_id                   = "${element(aws_subnet.kube_worker_subnet.*.id, count.index)}"
     security_groups             = ["${aws_security_group.kubernetes_workers.name}"]
     associate_public_ip_address = "${var.associate_pub_ip_worker}"
     vpc_security_group_ids      = ["${aws_security_group.kubernetes_workers.id}"]
