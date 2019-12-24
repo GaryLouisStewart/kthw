@@ -70,3 +70,35 @@ resource "aws_security_group_rule" "kube_master_insecure" {
 
 ## workers
 
+resource "aws_security_group_rule" "kube_node_ingress_self" {
+    description              = "Allow nodes to communicate with each other"
+    from_port                = 0
+    protocol                 = "-1"
+    security_group_id        = "${aws_security_group.kubernetes_workers.id}"
+    source_security_group_id = "${aws_security_group.kubernetes_workers.id}"
+    to_port                  = 65535
+    type                     = "ingress"
+}
+
+resource "aws_security_group_rule" "kube_node_ingress_cluster"{
+    description              = "Allow worker kubelets and pods to receive comms from cluster control pane"
+    from_port                = 1025
+    protocol                 = "tcp"
+    security_group_id        = "${aws_security_group.kubernetes_workers.id}"
+    source_security_group_id = "${aws_security_group.kubernetes_workers.id}"
+    to_port                  = 65535
+    type                     = "ingress"
+}
+
+
+## node to master access
+
+resource "aws_security_group_rule" "kube_node_cluster_ingress_node_https" {
+    description              = "Allow pods to communicate with the cluster API server"
+    from_port                = 443
+    protocol                 = "tcp"
+    security_group_id        = "${aws_security_group.kubernetes_masters.id}"
+    source_security_group_id = "${aws_security_group.kubernetes_workers.id}"
+    to_port                  = 443
+    type                     = "ingress"
+}
