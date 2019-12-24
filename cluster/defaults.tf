@@ -45,9 +45,9 @@ variable "associate_pub_ip_worker" {
 }
 
 variable "aws_keypair_name" {
-    description = "The aws keypair name"
-    type = "string"
-    default = ""
+    description = "A map of keypair names, one for the worker nodes and one for the master nodes."
+    type = "map"
+    default = {}
 }
 
 variable "kubemaster_cidr_ingress_access" {
@@ -72,7 +72,7 @@ variable "kubemaster_ingress_ports" {
     default = []
 }
 
-variable "kube_node_types" {
+variable "kube_node_type" {
     description = "A map of different instance types for master and workers"
     type = "map"
     default = {}

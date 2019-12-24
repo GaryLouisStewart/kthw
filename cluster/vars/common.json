@@ -15,9 +15,14 @@
         "worker": 3
     },
 
-    "kube_node_types": {
+    "kube_node_type": {
         "master": "t2.micro",
         "worker": "t2.micro"
+    },
+
+    "aws_keypair_name": {
+        "master": "kthw-master",
+        "worker": "kthw-worker"
     },
 
     "common_tags": {
@@ -36,8 +41,8 @@
         "enable_classiclink": false,
         "instance_tenancy": "default"
     },
+
     "cluster_name": "kthw",
-    "aws_keypair_name": "kthw-demo",
     "kubemaster_cidr_ingress_access": ["0.0.0.0/0"],
     "kubemaster_ingress_ports": ["443"]
 
