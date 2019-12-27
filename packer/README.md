@@ -25,24 +25,24 @@ The following is a wiki of all the different commands that can be run from withi
 - [ ] Builds an AMI image for our worker nodes
 - ```./build.sh -b worker```
   
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/FIX/packer-builds/packer/src/common/images/packer-build-worker.png?raw=true)
+![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/packer/src/common/images/packer-build-worker.png?raw=true)
 
 
 - [ ] Builds an AMI image for our master nodes
 - ```./build.sh -b master ```
 
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/FIX/packer-builds/packer/src/common/images/packer-build-master.png?raw=true)
+![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/packer/src/common/images/packer-build-master.png?raw=true)
 
 - [ ] Concurrent builds
 - ```./build.sh -b master && ./build.sh -b worker```
 
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/FIX/packer-builds/packer/src/common/images/packer-concurrent-builds.png?raw=true)
+![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/packer/src/common/images/packer-concurrent-builds.png?raw=true)
 
 
 - [ ] Provisioners executing on AMI build
 
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/FIX/packer-builds/packer/src/common/images/packer_provisioners.png?raw=true)
+![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/packer/src/common/images/packer_provisioners.png?raw=true)
 
 - [ ] Finished builds, what you should see at the end of a sucessfull build
   
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/FIX/packer-builds/packer/src/common/images/packer-sucessfull-build.png?raw=true)
+![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/packer/src/common/images/packer-sucessfull-build.png?raw=true)
