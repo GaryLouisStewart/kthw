@@ -6,7 +6,7 @@
 		"instance_type": "",
 		"ssh_username": "",
 		"type": "",
-        	"ami_name": "",
+        "ami_name": "",
 		"ami_owner": "",
 		"ssh_keypair_name":"",
 		"ssh_private_key_file":""
@@ -27,5 +27,14 @@
 			"most_recent": true
 		}
 
-	}]
+	}],
+	"provisioners": [
+		{
+			"type": "shell",
+			"execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
+			"scripts": [
+				"scripts/Install-Kubernetes.sh"
+			]
+		}
+	]
 }

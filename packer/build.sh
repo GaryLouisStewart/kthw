@@ -1,5 +1,5 @@
 #!/bin/bash
-# runs the packer-build task in order to setup our openvpn Image
+# packer builder for our worker nodes & 
 
 DATE_WITH_TIME=$(date "+%Y%m%d-%H%M%S")
 PACKER_LOG=1
@@ -11,11 +11,16 @@ directory=logs
 [[ -d $(pwd)/.logs ]] || mkdir -p "$(pwd)"./logs
 
 function packer_build() {
-    if [[ "$#" -lt 2 ]]; then
-      echo "ERROR: please specify the two variables files"
+    if [[ "$2" == "worker" ]]; then
+      echo "Building packer image for kubernetes worker: ...........%"
+      packer build -timestamp-ui -var-file node-vars.json worker-nodes.json
+    elif [[ "$2" == "master" ]]; then
+      echo "Building packer image for kubernetes masters: ..........%"
+      packer build -timestamp-ui -var-file master-vars.json master-nodes.json
     else
-      echo "Building packer image: ...........%"
-      packer build -timestamp-ui -var-file "$1" -var-file "$2"
+        echo "Please specify either 'worker' or 'master' as arguments'"
+        echo "$0: fatal error:" "$@" >&2
+        exit 1
     fi
 }
 
@@ -35,7 +40,7 @@ case $opt
 in
 
 build|-b)
-    packer_build "$2" "$3"
+    packer_build "$@"
     ;;
 rmdir|-rm)
     remove_old_dir

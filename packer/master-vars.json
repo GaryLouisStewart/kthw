@@ -1,9 +1,9 @@
 {
   "profile": "gary",
   "region": "eu-west-2",
-  "source_ami": "ami-0eab3a90fc693af19",
+  "source_ami": "ami-049a0a96d52cc48ee",
   "instance_type": "t2.micro",
-  "ssh_username": "centos",
+  "ssh_username": "ubuntu",
   "ssh_keypair_name": "master-nodes",
   "ssh_private_key_file":"master-nodes.key",
   "ami_name": "kube-master-node",
