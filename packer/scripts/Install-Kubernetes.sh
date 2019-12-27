@@ -4,14 +4,15 @@ KUBECTL_BIN=kubectl
 DOCKER_BIN=docker
 PROVISION_KUBE="true"
 
-if [ -z $(which $KUBECTL_BIN) ]; then
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt/bin/linux/amd64/$KUBECTL_BIN) \
+if [ -v $(which $KUBECTL_BIN) ]; then
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/$KUBECTL_BIN \
     && chmod +x ${KUBECTL_BIN} \
     && sudo mv ${KUBECTL_BIN} /usr/local/bin/${KUBECTL_BIN}
 else
     echo "Kubectl is already installed exiting"
     exit
 fi
+
 
 if [ "$PROVISION_KUBE" == "true" ]; then
     echo "Installing Kubernetes packages"
@@ -23,20 +24,20 @@ if [ "$PROVISION_KUBE" == "true" ]; then
     && sudo apt-get update -y -qq \
     && sudo apt-get install -y -qq kubelet kubeadm kubectl kubernetes-cni
 else
-    echo "Kubelet is already installed exiting."
+    echo "Kubelet is already installed exiting...."
     exit
 fi
 
-if [ -z $(which $DOCKER_BIN) ]; then
- echo "Installing docker"....
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
- && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
- && sudo apt-get -y update \
- && apt-cache policy docker-ce \
- && sudo apt-get install -y docker-ce
+if [ -v $(which $DOCKER_BIN) ]; then
+    echo "Installing docker"....
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
+    && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+    && sudo apt-get -y update \
+    && apt-cache policy docker-ce \
+    && sudo apt-get install -y docker-ce
 else
-  echo "Docker already installed exiting."
-  exit
+    echo "Docker already installed exiting...."
+    exit
 fi
 
 
