@@ -27,5 +27,14 @@
 			"most_recent": true
 		}
 
-	}]
+	}],
+	"provisioners": [
+		{
+			"type": "shell",
+			"execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
+			"scripts": [
+				"scripts/Install-Kubernetes.sh"
+			]
+		}
+	]
 }
