@@ -10,17 +10,19 @@ The following is a combination of resources provisioned in terraform to allow us
 I have automated most of this using a makefile to allow for very easy creates, updates, and deletion of resources. you can however view the actual code behind the scenes in each of the three folders `packer, cluster, bastion_host and the scripts folder` to gain an idea of what is going on. The following table below provides an idea of what each makefile target does
 
 ---
-|Target                 |description                                   |
-|-----------------------|----------------------------------------------|
-| worker_ami            | Build the worker ami for kubernetes          |
-| master_ami            | Build the master ami for kubernetes          |
-| ssh_cleanup           | Clean up the local ssh keys and aws keypairs |
-| bastion_test          | Runs a terraform plan for the bastion_host   |
-| bastion_build         | Runs a terraform apply for the bastion_host  |
-| bastion_destroy       | Runs a terraform destroy for the bastion_host|
-| kube_test             | Runs a terraform plan for the kube cluster   |
-| kube_build            | Runs a terraform apply for the kube cluster  |
-| kube_destroy          | Runs a terraform destroy for the kube cluster|
+|Target                 |description                                           |
+|-----------------------|------------------------------------------------------|
+| worker_ami            | Build the worker ami for kubernetes                  |
+| master_ami            | Build the master ami for kubernetes                  |
+| ssh_cleanup           | Clean up the local ssh keys and aws keypairs         |
+| bastion_test          | Runs a terraform plan for the bastion_host           |
+| bastion_build         | Runs a terraform apply for the bastion_host          |
+| bastion_destroy       | Runs a terraform destroy for the bastion_host        |
+| kube_test             | Runs a terraform plan for the kube cluster           |
+| kube_build            | Runs a terraform apply for the kube cluster          |
+| kube_destroy          | Runs a terraform destroy for the kube cluster        |
+| bastion_validate      | Runs a terraform validate in the bastion_host DIR    |
+| kube_validate         | Runs a terraform validate in the cluster DIR         |
 ---
 
 ## Here are a few examples that I have captured when running the makefile
