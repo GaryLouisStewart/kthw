@@ -77,3 +77,15 @@ variable "kube_node_type" {
     type = "map"
     default = {}
 }
+
+variable "kube_master_subnet" {
+    description = "A list of public "
+    type = "list"
+    default = []
+}
+
+variable "kube_worker_subnet" {
+    description = "A list of private subnets to create"
+    type = "list"
+    default = []
+}

@@ -6,13 +6,13 @@
     },
 
     "kube_amis": {
-        "master": "kthw-master",
-        "worker": "kthw-worker"
+        "master": "ami-0b4c1ef54303aff64",
+        "worker": "ami-0517c2db07ca86c75"
     },
 
     "node_count": {
-        "master": 2,
-        "worker": 3
+        "master": 1,
+        "worker": 2
     },
 
     "kube_node_type": {
@@ -21,13 +21,13 @@
     },
 
     "aws_keypair_name": {
-        "master": "kthw-master",
-        "worker": "kthw-worker"
+        "master": "master-nodes",
+        "worker": "worker-nodes"
     },
 
     "common_tags": {
         "Environment": "Development",
-        "Platform": "Ubuntu 16.06 xenial",
+        "Platform": "Ubuntu 16.04 xenial",
         "Application": "Kubernetes cluster",
         "Service": "kubernetes",
         "Terraformed": "true",
@@ -35,13 +35,15 @@
     },
 
     "vpc_vars": {
-        "cidr_block": "10.0.0.15/24",
+        "cidr_block": "10.0.0.0/16",
         "enable_dns_support": true,
         "enable_dns_hostnames": true,
         "enable_classiclink": false,
         "instance_tenancy": "default"
     },
 
+    "kube_master_subnet": ["10.0.1.0/24", "10.0.2.0/24"],
+    "kube_worker_subnet": ["10.0.3.0/24", "10.0.4.0/24"],
     "cluster_name": "kthw",
     "kubemaster_cidr_ingress_access": ["0.0.0.0/0"],
     "kubemaster_ingress_ports": ["443"]
