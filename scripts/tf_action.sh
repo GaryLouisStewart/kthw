@@ -14,8 +14,12 @@ source "$DIR/../scripts/path.sh" # although the shell complains ( used shellchec
 # create a <CWD>/.logs folder for terraform to store logs in.
 [[ -d "$(pwd)/.logs" ]] || mkdir -p "$(pwd)/.logs"
 
-function tf_init() {
+function terraform_init() {
   terraform init
+}
+
+function terraform_validate() {
+  terraform validate
 }
 
 function terraform_plan() {
@@ -41,13 +45,14 @@ function terraform_output() {
 }
 
 function usage() {
-    echo "usage: [-i, --init, | -a, --apply | -p, --plan | -d, --destroy | -o, --output | -h, --help]"
-    echo "  -i  --init    runs a terraform init, e.g. [ \$tf_action -i]"
-    echo "  -a, --apply   runs a terraform apply, e.g. [ \$tf_action -a ]"
-    echo "  -p, --plan    runs a terraform plan, [ \$tf_action plan -p]"
-    echo "  -d, --destory runs a terraform destroy, [ \$tf_action -d ]"
-    echo "  -o, --output  runs a terraform output, [ \$tf_action -o <resource-name> ]"
-    echo "  -h, --help    display help, [ \$tf_action -h ]"
+    echo "usage: [-l, --lint | -i, --init, | -a, --apply | -p, --plan | -d, --destroy | -o, --output | -h, --help]"
+    echo "  -i  --init     runs a terraform init, e.g. [ \$tf_action -i]"
+    echo "  -v  --validate runs a terraform lint, e.g. [ \$tf_action -v]"
+    echo "  -a, --apply    runs a terraform apply, e.g. [ \$tf_action -a ]"
+    echo "  -p, --plan     runs a terraform plan, [ \$tf_action plan -p]"
+    echo "  -d, --destory  runs a terraform destroy, [ \$tf_action -d ]"
+    echo "  -o, --output   runs a terraform output, [ \$tf_action -o <resource-name> ]"
+    echo "  -h, --help     display help, [ \$tf_action -h ]"
     exit 1
 }
 
@@ -55,7 +60,10 @@ opt=$1
 case $opt
 in
     -i| --init)
-    tf_init
+    terraform_init
+    ;;
+    -v| --validate)
+    terraform_validate
     ;;
     -p| --plan)
     terraform_plan
