@@ -1,7 +1,7 @@
 resource "aws_subnet" "kube_master_subnet" {
     count               = 2
     availability_zone   = "${data.aws_availability_zones.available.names[count.index]}"
-    cidr_block          = "10.1.${count.index}.15/24"
+    cidr_block          = "${element(var.kube_master_subnet, count.index)}"
     vpc_id              = "${aws_vpc.kubernetes_vpc.id}"
     tags = "${merge(map(
         "Name", "Kubernetes Master Nodes",
@@ -12,7 +12,7 @@ resource "aws_subnet" "kube_master_subnet" {
 resource "aws_subnet" "kube_worker_subnet" {
     count               = 2
     availability_zone   = "${data.aws_availability_zones.available.names[count.index]}"
-    cidr_block          = "10.2.${count.index}.15/24"
+    cidr_block          = "${element(var.kube_worker_subnet, count.index)}"
     vpc_id              = "${aws_vpc.kubernetes_vpc.id}"
     tags = "${merge(map(
         "Name", "Kubernetes Worker Nodes",

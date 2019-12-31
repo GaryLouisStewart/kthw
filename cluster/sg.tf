@@ -47,8 +47,8 @@ resource "aws_security_group" "kubernetes_workers" {
 
 ## masters
 resource "aws_security_group_rule" "kube_master_secure" {
-  count             = "${var.kubemaster_secure_ingress ? length(var.kubemaster_ingress_ports)  :0}"
-  cidr_blocks       = ["${length(var.kubemaster_cidr_ingress_access)}"]
+  count             = "${var.kubemaster_secure_ingress ? length(var.kubemaster_ingress_ports) :0}"
+  cidr_blocks       = ["${element(var.kubemaster_cidr_ingress_access, count.index)}"]
   description       = "Allow workstation to communicate with the cluster API Server"
   from_port         = "${element(var.kubemaster_ingress_ports, count.index)}"
   protocol          = "tcp"
@@ -58,7 +58,7 @@ resource "aws_security_group_rule" "kube_master_secure" {
 }
 
 resource "aws_security_group_rule" "kube_master_insecure" {
-  count             = "${var.kubemaster_insecure_ingress ? length(var.kubemaster_ingress_ports)  :0}"
+  count             = "${var.kubemaster_insecure_ingress ? length(var.kubemaster_ingress_ports) :0}"
   cidr_blocks       = ["${chomp(data.http.myipaddr.body)}/32"]
   description       = "Allow workstation to communicate with the cluster API Server"
   from_port         = "${element(var.kubemaster_ingress_ports, count.index)}"
