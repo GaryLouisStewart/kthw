@@ -25,15 +25,6 @@ ssh_cleanup: packer/* ## cleanup the old ssh-keys in the packer-directory for wo
 	&& ./gen_keys.sh -d worker-nodes \
 	&& ./gen_keys.sh -d master-nodes
 
-bastion_test: bastion_host/*.tf ## plans the bastion host infrastructure using terraform
-	cd bastion_host && ../scripts/tf_action.sh -p
-
-bastion_build: bastion_host/*.tf ## builds the bastion host infrastructure using terraform
-	cd bastion_host && ../scripts/tf_action.sh -a
-
-bastion_destroy: bastion_host/*.tf ## destroy the bastion host infrastructure using terraform
-	cd bastion_host && ../scripts/tf_action.sh -d
-
 kube_test: cluster/*.tf ## plans the kubernetes infrastructure using terraform
 	cd cluster && ../scripts/tf_action.sh -p
 
