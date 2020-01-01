@@ -12,7 +12,7 @@ variable "ssh_keypair" {
 
 variable "common_tags" {
     description = "Common tags to apply to all our resources"
-    type = "list"
+    type = "map"
 }
 
 variable "target_vpc_id" {
@@ -21,7 +21,7 @@ variable "target_vpc_id" {
 }
 
 variable "bastion_subnets" {
-    description = "bastion_subnets"
+    description = "The CIDR ranges for the EC2 subnets for the bastion hosts"
     type = "list"
 }
 
@@ -32,11 +32,11 @@ variable "bastion_ssh_ingress" {
 
 variable "target_security_group_id" {
     description = "The security groups to give access to our kubernetes"
-    type = "list"
+    type = "string"
 }
 
 variable "cidr_range_bastion_access" {
-    description = "The CIDR Ranges to allow access to from the bastion host"
+    description = "The CIDR Ranges to allow access into the bastion hosts"
     type = "list"
 }
 
