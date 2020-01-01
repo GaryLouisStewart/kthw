@@ -4,20 +4,11 @@ resource "aws_instance"  "bastion-instance" {
     ami                     = "${var.bastion_ami}"
     key_name                = "${var.ssh_keypair}"
     instance_type           = "${var.instance_type}"
-    vpc_security_group_ids  = ["${aws_security_group.bastion-host.id}"]
+    vpc_security_group_ids  = ["${aws_security_group.bastion-ssh.id}"]
     tags = "${merge(map(
         "Name", "Bastion host"
     ), var.common_tags)}"
 
-}
-
-
-# elastic IP's and internet gateway
-resource "aws_eip" "bastion_eip" {
-    count                   = "${var.bastion_count}"
-    instance                = "${element(aws_instance.bastion-instance, count.index)}"
-    vpc                     = true
-    depends_on              = ["aws_internet_gateway.bastion"]
 }
 
 
@@ -30,17 +21,18 @@ resource "aws_internet_gateway" "bastion" {
 # subnets
 
 resource "aws_subnet" "bastion-public-subnet"{
-    count               = "${var.bastion_count}"
-    availability_zone   = "${data.aws_availability_zones.available.names[count.index]}"
-    cidr_block          = "${element(var.bastion_subnets, count.index)}"
-    vpc_id              = "${var.target_vpc_id}"
+    count                   = "${var.bastion_count}"
+    availability_zone       = "${data.aws_availability_zones.available.names[count.index]}"
+    cidr_block              = "${element(var.bastion_subnets, count.index)}"
+    vpc_id                  = "${var.target_vpc_id}"
+    map_public_ip_on_launch =  true
 }
 
 
 # security group
 
 resource "aws_security_group" "bastion-ssh" {
-    names               = "bastion-host-security-group"
+    name                = "bastion-host-security-group"
     description         = "A security group for the bastion host servers"
     vpc_id              = "${var.target_vpc_id}"
 
@@ -69,8 +61,8 @@ resource "aws_security_group_rule" "bastion-ssh" {
     type                        = "ingress" 
 }
 
-resource "aws_security_group" "bastion-to-kubernetes-workers" {
-    cidr_block                  = ["${length(var.ingress_kubernetes)}"]
+resource "aws_security_group_rule" "bastion-to-kubernetes-workers" {
+    cidr_blocks                 = ["${length(var.bastion_subnets)}"]
     description                 = "Allow nodes to connect to private subnets"
     from_port                   = "443"
     protocol                    = "tcp"

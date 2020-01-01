@@ -1,11 +1,6 @@
 output "bastion_instance_ids" {
-    value = aws_instance.bastion-instance.count.index.id
+    value = aws_instance.bastion-instance.*.id
     description = "bastion host ec2 instance ids"
-}
-
-output "bastion_ips" {
-    value = aws_eip.bastion_eip.count.index.public_ip
-    description = "Bastion host Elastic IP addresses"
 }
 
 output "igw_id" {
