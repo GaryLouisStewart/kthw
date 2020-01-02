@@ -52,7 +52,8 @@ resource "aws_security_group" "bastion-ssh" {
 # security group rules
 
 resource "aws_security_group_rule" "bastion-ssh" {
-    cidr_blocks                 = ["${length(var.bastion_ssh_ingress)}"]
+    count                       =  "${length(var.bastion_ssh_ingress)}"
+    cidr_blocks                 = ["${element(var.bastion_ssh_ingress, count.index)}"]
     description                 = "Allow ssh ingress into bastion host nodes"
     from_port                   = "443"
     protocol                    = "tcp"
@@ -62,7 +63,8 @@ resource "aws_security_group_rule" "bastion-ssh" {
 }
 
 resource "aws_security_group_rule" "bastion-to-kubernetes-workers" {
-    cidr_blocks                 = ["${length(var.bastion_subnets)}"]
+    count                       = "${length(var.bastion_subnets)}"
+    cidr_blocks                 = ["${element(var.bastion_subnets, count.index)}"]
     description                 = "Allow nodes to connect to private subnets"
     from_port                   = "443"
     protocol                    = "tcp"
