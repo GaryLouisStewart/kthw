@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: worker_ami master_ami ssh_cleanup bastion_test bastion_build bastion_destroy kube_test kube_build kube_destroy bastion_validate kube_validate
+.PHONY: worker_ami master_ami ssh_cleanup kube_test kube_build kube_destroy kube_validate
 
 all: help
 
@@ -34,8 +34,8 @@ kube_build: cluster/*.tf ## create kubernetes infrastructure using terraform
 kube_destroy: cluster/*.tf ## destroy the kubernetes infrastructure using terraform
 	cd cluster && ../scripts/tf_action.sh -d
 
-bastion_validate: bastion_host/*.tf ## runs a terraform validate against files under bastion_host directory
-	cd bastion_host && ../scripts/tf_action.sh -v
+bastion_validate: modules/bastion-host/*.tf ## runs a terraform validate against files under bastion_host directory
+	cd modules/bastion-host && ../../scripts/tf_action.sh -v
 
 kube_validate: cluster/*.tf ## runs a terraform validate against files under the cluster directory
 	cd cluster && ../scripts/tf_action.sh -v
