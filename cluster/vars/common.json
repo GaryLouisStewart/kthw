@@ -5,25 +5,14 @@
         "aws_profile": "gary"
     },
 
-    "kube_amis": {
-        "master": "ami-0b4c1ef54303aff64",
-        "worker": "ami-0517c2db07ca86c75"
-    },
-
-    "node_count": {
-        "master": 1,
-        "worker": 2
-    },
-
-    "kube_node_type": {
-        "master": "t2.micro",
-        "worker": "t2.micro"
-    },
-
-    "aws_keypair_name": {
-        "master": "master-nodes",
-        "worker": "worker-nodes"
-    },
+    "ami_worker_node": "ami-0517c2db07ca86c75",
+    "ami_master_node": "ami-0b4c1ef54303aff64",
+    "type_worker_node": "t2.micro",
+    "type_master_node": "t2.micro",
+    "ssh_keypair_worker": "worker-nodes",
+    "ssh_keypair_master": "master-nodes",
+    "master_node_count": 1,
+    "worker_node_count": 2,
 
     "common_tags": {
         "Environment": "Development",
@@ -42,10 +31,10 @@
         "instance_tenancy": "default"
     },
 
-    "kube_master_subnet": ["10.0.1.0/24", "10.0.2.0/24"],
-    "kube_worker_subnet": ["10.0.3.0/24", "10.0.4.0/24"],
+    "subnet_kube_masters": ["10.0.1.0/24", "10.0.2.0/24"],
+    "subnet_kube_workers": ["10.0.3.0/24", "10.0.4.0/24"],
     "cluster_name": "kthw",
-    "kubemaster_cidr_ingress_access": ["0.0.0.0/0"],
-    "kubemaster_ingress_ports": ["443"]
+    "kubernetes_masters_ingress_cidr_range": ["0.0.0.0/0"],
+    "ingress_ports_kubernetes_masters": ["443"]
 
 }
