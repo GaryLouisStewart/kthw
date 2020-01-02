@@ -21,7 +21,7 @@ resource "aws_internet_gateway" "bastion" {
 # subnets
 
 resource "aws_subnet" "bastion-public-subnet"{
-    count                   = "${var.bastion_count}"
+    count                   = "${length(var.bastion_subnets)}"
     availability_zone       = "${data.aws_availability_zones.available.names[count.index]}"
     cidr_block              = "${element(var.bastion_subnets, count.index)}"
     vpc_id                  = "${var.target_vpc_id}"
