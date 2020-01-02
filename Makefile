@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: worker_ami master_ami ssh_cleanup kube_test kube_build kube_destroy kube_validate
+.PHONY: worker_ami master_ami ssh_cleanup cluster_test cluster_build cluster_destroy cluster_validate bastion_validate kubernetes_cluster_validate
 
 all: help
 
@@ -25,17 +25,21 @@ ssh_cleanup: packer/* ## cleanup the old ssh-keys in the packer-directory for wo
 	&& ./gen_keys.sh -d worker-nodes \
 	&& ./gen_keys.sh -d master-nodes
 
-kube_test: cluster/*.tf ## plans the kubernetes infrastructure using terraform
+cluster_test: cluster/*.tf ## plans the kubernetes infrastructure using terraform
 	cd cluster && ../scripts/tf_action.sh -p
 
-kube_build: cluster/*.tf ## create kubernetes infrastructure using terraform
+cluster_build: cluster/*.tf ## create kubernetes infrastructure using terraform
 	cd cluster && ../scripts/tf_action.sh -a
 
-kube_destroy: cluster/*.tf ## destroy the kubernetes infrastructure using terraform
+cluster_destroy: cluster/*.tf ## destroy the kubernetes infrastructure using terraform
 	cd cluster && ../scripts/tf_action.sh -d
 
-bastion_validate: modules/bastion-host/*.tf ## runs a terraform validate against files under bastion_host directory
+bastion_validate: modules/bastion-host/*.tf ## runs a terraform validate against files under the modules/bastion-host module
 	cd modules/bastion-host && ../../scripts/tf_action.sh -v
 
-kube_validate: cluster/*.tf ## runs a terraform validate against files under the cluster directory
+cluster_validate: modules/ec2-cluster/*.tf ## runs a terraform validate against files under the modules/ec2-cluster module
+	cd modules/ec2-cluster && ../scripts/tf_action.sh -v
+
+kubernetes_cluster_validate: cluster/*.tf ## runs a terraform validate against the kubernetes cluster we are using with the two modules
 	cd cluster && ../scripts/tf_action.sh -v
+   
