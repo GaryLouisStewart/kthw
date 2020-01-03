@@ -43,5 +43,5 @@ cluster_validate: modules/ec2-cluster/*.tf ## runs a terraform validate against 
 kubernetes_cluster_validate: cluster/*.tf ## runs a terraform validate against the kubernetes cluster we are using with the two modules
 	cd cluster && ../../scripts/tf_action.sh -i && ../scripts/tf_action.sh -v
 
-sanity_test: tests/go_sanity_test.go ## runs a small test in order to check golang
-   cd tests && go test -v
+sanity_test: tests/sanity_test/go_sanity_test.go ## runs a small test in order to check golang
+   cd tests/sanity_test && go test -v

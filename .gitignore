@@ -1,10 +1,14 @@
 ./terraform/*
-cluster/.terraform
-./cluster/.terraform/*
-bastion_host/.terraform/*
+cluster/.terraform/*
+modules/ec2-cluster/.terraform/*
+modules/bastion-host/.terraform/*
 .logs
 *.tfstate
 crash.log
 lock.json
 *.key
 *.key.pub
+tests/go.mod
+tests/go.sum
+tests/python_ec2_cleanup/__pycache__
+tests/python_ec2_cleanup/boto3
