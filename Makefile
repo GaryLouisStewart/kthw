@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: worker_ami master_ami ssh_cleanup cluster_test cluster_build cluster_destroy cluster_validate bastion_validate kubernetes_cluster_validate sanity_test
+.PHONY: worker_ami master_ami ssh_cleanup cluster_test cluster_build cluster_destroy cluster_validate bastion_validate kubernetes_cluster_validate sanity_test worker_ami_test master_ami_test
 
 all: help
 
@@ -13,12 +13,14 @@ help: 								## show this help
 worker_ami: packer/*.json ## builds the packer-ami for the worker nodes
 	cd packer  \
 	&& ./gen_keys.sh -g worker-nodes \
-	&& ./build.sh -b worker
+	&& ./build.sh -b worker \
+	&& ./gen_keys.sh -d worker-nodes
 
 master_ami: packer/*.json ## builds the packer-ami for the master nodes
 	cd packer \
 	&& ./gen_keys.sh -g master-nodes \
-	&& ./build.sh -b master
+	&& ./build.sh -b master \
+	&& ./gen_keys.sh -d master-nodes
 
 ssh_cleanup: packer/* ## cleanup the old ssh-keys in the packer-directory for worker and master nodes
 	cd packer \
@@ -43,5 +45,21 @@ cluster_validate: modules/ec2-cluster/*.tf ## runs a terraform validate against 
 kubernetes_cluster_validate: cluster/*.tf ## runs a terraform validate against the kubernetes cluster we are using with the two modules
 	cd cluster && ../../scripts/tf_action.sh -i && ../scripts/tf_action.sh -v
 
-sanity_test: tests/sanity_test/go_sanity_test.go ## runs a small test in order to check golang
-   cd tests/sanity_test && go test -v
+sanity_test: tests/sanity_test/go_sanity_test.go ## runs a small test in order to check golang is functioning correctly on our system
+	cd tests/sanity_test && go test -v
+
+worker_ami_test: tests/packer/worker_tests/* ## runs the tests for the worker ami build
+	cd tests/packer/worker_tests \
+	&& go mod init packer_worker_test.go \
+	&& ../../../packer/gen_keys.sh -g worker-nodes \
+	&& go test -v \
+	&& ../../../packer/gen_keys.sh -d worker-nodes \
+	&& rm go.mod go.sum
+
+master_ami_test: tests/packer/master_tests/* ## runs the tests for the master ami build
+	cd tests/packer/master_tests \
+	&& go mod init packer_master_test.go \
+	&& ../../../packer/gen_keys.sh -g worker-nodes \
+	&& go test -v \
+	&& ../../../packer/gen_keys.sh -d master-nodes \
+	&& rm go.mod go.sum
