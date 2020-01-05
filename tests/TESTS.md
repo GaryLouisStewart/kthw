@@ -1,7 +1,6 @@
 # Infrastructure testing
 
-Testing is important especially considering that this is going to be infrastructure which is supporting many people and things.
-
+Provides a suite of tests for our infrastructure
 
 - [ ] Tests for our terraform infrastructure
 - [ ] golang tests of our platform kthw

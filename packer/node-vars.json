@@ -7,5 +7,6 @@
     "ssh_keypair_name": "worker-nodes",
     "ssh_private_key_file":"worker-nodes.key",
     "ami_name": "kube-worker-node",
-    "ami_owner": "679593333241"
+    "ami_owner": "679593333241",
+    "bootstrap_shell_script_path": "scripts/Install-Kubernetes.sh"
 }

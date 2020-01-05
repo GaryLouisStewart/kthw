@@ -1,16 +1,15 @@
 {
 	"variables": {
-		"profile": "",
-		"region": "",
-		"source_ami": "",
-		"instance_type": "",
-		"ssh_username": "",
-		"type": "",
-        "ami_name": "",
-		"ami_owner": "",
-		"ssh_keypair_name":"",
-		"ssh_private_key_file":"",
-		"bootstrap_shell_script_path":""
+		"profile": "gary",
+		"region": "eu-west-2",
+		"source_ami": "ami-049a0a96d52cc48ee",
+		"instance_type": "t2.micro",
+		"ssh_username": "ubuntu",
+		"ssh_keypair_name": "worker-nodes",
+		"ssh_private_key_file":"worker-nodes.key",
+		"ami_name": "kube-worker-node",
+		"ami_owner": "679593333241",
+		"bootstrap_shell_script_path": ""
 	},
 
 	"builders": [{
