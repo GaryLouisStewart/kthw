@@ -8,7 +8,8 @@ crash.log
 lock.json
 *.key
 *.key.pub
-tests/go.mod
-tests/go.sum
-tests/python_ec2_cleanup/__pycache__
-tests/python_ec2_cleanup/boto3
+go.mod
+go.sum
+__pycache__
+boto3
+.test-data
