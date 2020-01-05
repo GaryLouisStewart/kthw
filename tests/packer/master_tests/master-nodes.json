@@ -1,16 +1,15 @@
 {
 	"variables": {
-		"profile": "",
-		"region": "",
-		"source_ami": "",
-		"instance_type": "",
-		"ssh_username": "",
-		"type": "",
-        "ami_name": "",
-		"ami_owner": "",
-		"ssh_keypair_name":"",
-		"ssh_private_key_file":"",
-		"bootstrap_shell_script_path":""
+		"profile": "gary",
+		"region": "eu-west-2",
+		"source_ami": "ami-049a0a96d52cc48ee",
+		"instance_type": "t2.micro",
+		"ssh_username": "ubuntu",
+		"ssh_keypair_name": "master-nodes",
+		"ssh_private_key_file":"master-nodes.key",
+		"ami_name": "kube-master-node",
+		"ami_owner": "679593333241",
+		"bootstrap_shell_script_path": ""
 	},
 
 	"builders": [{
@@ -20,14 +19,13 @@
 		"source_ami": "{{user `source_ami`}}",
 		"instance_type": "{{user `instance_type`}}",
 		"ssh_username": "{{user `ssh_username`}}",
-		"ssh_keypair_name":"{{user `ssh_keypair_name`}}",
-		"ssh_private_key_file":"{{user `ssh_private_key_file`}}",
+		"ssh_keypair_name": "{{user `ssh_keypair_name`}}",
+		"ssh_private_key_file": "{{user `ssh_private_key_file`}}",
 		"ami_name": "{{user `ami_name`}}-{{timestamp}}",
 		"source_ami_filter": {
-			"owners": ["{{ user `ami_owner`}}"],
+			"owners": ["679593333241"],
 			"most_recent": true
 		}
-
 	}],
 	"provisioners": [
 		{
