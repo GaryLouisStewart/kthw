@@ -1,0 +1,5 @@
+---
+# defaults file for kube-bootstrap role
+
+install_kube: true
+install_docker: true

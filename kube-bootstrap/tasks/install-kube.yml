@@ -1,0 +1,20 @@
+- name: Ensure Kubectl apt repository key is present
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Ensure kubernetes apt-repository is present
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Run apt-get update
+  apt:
+    update_cache: yes
+
+- name: Ensure kubernetes packages are installed on hosts
+  apt:
+    pkg:
+    - kubelet
+    - kubeadm
+    - kubectl

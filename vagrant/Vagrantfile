@@ -1,0 +1,33 @@
+require 'yaml'
+servers = YAML.load_file('machines.yaml')
+Vagrant.configure(2) do |config|
+    servers.each do |servers|
+            config.vm.define servers["name"] do |s|
+            s.vm.box = servers["box"]
+            s.vm.hostname = servers["hostname"]
+            s.vm.network "private_network",
+                ip: servers["ip"],
+                :type => "dhcp",
+                :libvirt__network_name => "kube-net",
+                :libvirt__domain_name  => "cka.local"
+            s.vm.provider "libvirt" do |libvirt|
+                libvirt.driver = 'qemu'
+                libvirt.host = 'localhost'
+                libvirt.uri = 'qemu:///system'
+                libvirt.memory = servers["ram"]
+                libvirt.nested = true
+                libvirt.cpu_mode = "host-model"
+                libvirt.cpus = servers["cpu"]
+                libvirt.management_network_name = 'vagrant-mgmt'
+                libvirt.management_network_address = '192.168.77.1/24'
+            config.vm.synced_folder "src/", servers["shared_folder"]
+            if servers["prov"] == "ansible"
+                s.vm.provision "ansible" do |ansible|
+                    ansible.limit = "all"
+                    ansible.playbook = "../playbook.yml"
+                end
+            end
+         end
+      end
+  end
+end
