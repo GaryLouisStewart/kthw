@@ -20,7 +20,6 @@ Vagrant.configure(2) do |config|
                 libvirt.cpus = servers["cpu"]
                 libvirt.management_network_name = 'vagrant-mgmt'
                 libvirt.management_network_address = '192.168.77.1/24'
-            config.vm.synced_folder "src/", servers["shared_folder"]
             if servers["prov"] == "ansible"
                 s.vm.provision "ansible" do |ansible|
                     ansible.limit = "all"

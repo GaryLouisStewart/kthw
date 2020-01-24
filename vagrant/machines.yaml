@@ -1,29 +1,26 @@
-- name: master-node
+- name: kube-master
   box: debian/stretch64
   hostname: "master-node"
   ip: 10.0.10.41
   environment: staging
-  shared_folder: /share/master
   cpu: 1
   ram: 2048
   prov: "ansible"
 
-- name: worker-node-1
+- name: kube-node-1
   box: debian/stretch64
   hostname: "kube-worker-1"
   ip: 10.0.10.42
   environment: staging
-  shared_folder: /share/worker
   cpu: 2
   ram: 2048
   prov: "ansible"
 
-- name: worker-node-2
+- name: kube-node-2
   box: debian/stretch64
   hostname: "kube-worker-2"
   ip: 10.0.10.43
   environment: staging
-  shared_folder: /share/worker
   cpu: 2
   ram: 2048
   prov: "ansible"
