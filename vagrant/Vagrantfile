@@ -1,3 +1,9 @@
+$script = <<-SCRIPT
+# Requires admin rights currently, need to figure out how to remove this risk and run with minimal privileges.
+echo "creating virtualbox networks for CKA"
+sudo ./boostrap-networks.sh -c
+SCRIPT
+
 require 'yaml'
 servers = YAML.load_file('machines.yaml')
 Vagrant.configure(2) do |config|
@@ -20,6 +26,7 @@ Vagrant.configure(2) do |config|
                 libvirt.cpus = servers["cpu"]
                 libvirt.management_network_name = 'vagrant-mgmt'
                 libvirt.management_network_address = '192.168.77.1/24'
+            config.vm.synced_folder "src/", "/opt/synced"
             if servers["prov"] == "ansible"
                 s.vm.provision "ansible" do |ansible|
                     ansible.limit = "all"
