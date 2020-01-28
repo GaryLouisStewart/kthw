@@ -1,0 +1,3 @@
+---
+# defaults file for kube-master
+bootstrap_master_node: true

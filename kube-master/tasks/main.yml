@@ -1,5 +1,3 @@
----
-# taskfile for Centos7 CIS
 - name: Check os version and family
   fail:
       msg: "This role can only be run against Debian 9 Stretch. {{ ansible_distribution }} {{ ansible_distribution_major_version }} is not supported."
@@ -16,20 +14,11 @@
   tags:
       - always
 
-- include: pre-build.yml
+- name: Load in variables file
+  include_vars: "master-vars.yml"
+
+- include: master-bootstrap.yml
   become: yes
   tags:
-    - pre-build
+    - master-bootstrap
     - always
-
-- include: install-docker.yml
-  become: yes
-  when: install_docker
-  tags:
-    - install_docker
-
-- include: install-kube.yml
-  become: yes
-  when: install_kube
-  tags:
-      - install_kube

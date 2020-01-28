@@ -1,0 +1,74 @@
+- name: Install preliminary packages
+  apt:
+    name: "{{ prebuild_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Add an apt-signing key for docker
+  apt_key:
+   url: "{{ docker_apt_key }}"
+   state: present
+
+- name: Add Apt repository for stable version
+  apt_repository:
+   repo: "{{ docker_apt_repo }}"
+   state: present
+
+- name: Install docker and it's dependencies
+  apt:
+   name: "{{ docker_packages }}"
+   state: present
+   update_cache: yes
+   notify:
+   - docker status
+
+- name: Add vagrant user to docker group
+  user:
+   name: vagrant
+   group: docker
+
+- name: Remove swap file from /etc/fstab
+  mount:
+   name: "{{ item }}"
+   fstype: swap
+   state: absent
+  with_items:
+    - swap
+    - none
+
+- name: Disable swap
+  command: swapoff -a
+  when: ansible_swaptotal_mb> 0
+
+ - name: Add an apt signing key for Kubernetes
+    apt_key:
+      url: "{{ kubernetes_apt_key }}"
+      state: present
+
+  - name: Adding apt repository for Kubernetes
+    apt_repository:
+      repo: "{{ kubernetes_apt_repo }}"
+      state: present
+      filename: kubernetes.list
+
+  - name: Install Kubernetes binaries
+    apt:
+      name: "{{ kubernetes_packages }}"
+      state: present
+      update_cache: yes
+
+  - name: Configure node ip
+    lineinfile:
+      path: /etc/default/kubelet
+      line: KUBELET_EXTRA_ARGS=--node-ip={{ node_ip }}
+
+  - name: Restart kubelet
+    service:
+      name: kubelet
+      daemon_reload: yes
+
+  - name: Copy the join command to server location
+    copy: src=join-command dest=/tmp/join-command.sh mode=0777
+
+  - name: Join the node to cluster
+    command: sh /tmp/join-command.sh

@@ -1,8 +1,9 @@
 ---
 - hosts: all
+  become: true
   # pre_tasks:
   #   - name: Install packages for testing under docker
-  #     yum:
+  #     apt:
   #       name: "{{ item }}"
   #       state: present
   #     with_items:
@@ -11,4 +12,4 @@
   #       - openssh-server
   #       - which
   roles:
-    - role: kube-bootstrap
+    - role: kube-nodes

@@ -1,26 +1,27 @@
-- name: kube-master
-  box: debian/stretch64
+- name: k8s-master
+  box: debian/jessie64
+  type: "master"
   hostname: "master-node"
   ip: 10.0.10.41
-  environment: staging
-  cpu: 1
+  environment: "dev"
+  cpu: 2
   ram: 2048
-  prov: "ansible"
 
-- name: kube-node-1
-  box: debian/stretch64
+
+- name: k8s-node-1
+  box: debian/jessie64
+  type: "node"
   hostname: "kube-worker-1"
   ip: 10.0.10.42
-  environment: staging
+  environment: "dev"
   cpu: 2
   ram: 2048
-  prov: "ansible"
 
-- name: kube-node-2
-  box: debian/stretch64
+- name: k8s-node-2
+  type: "node"
+  box: "debian/jessie64"
   hostname: "kube-worker-2"
   ip: 10.0.10.43
-  environment: staging
+  environment: "dev"
   cpu: 2
   ram: 2048
-  prov: "ansible"

@@ -27,13 +27,25 @@ Vagrant.configure(2) do |config|
                 libvirt.management_network_name = 'vagrant-mgmt'
                 libvirt.management_network_address = '192.168.77.1/24'
             config.vm.synced_folder "src/", "/opt/synced"
-            if servers["prov"] == "ansible"
+            if servers["type"] == "nodes"
                 s.vm.provision "ansible" do |ansible|
                     ansible.limit = "all"
-                    ansible.playbook = "../playbook.yml"
+                    ansible.playbook = "../node-playbook.yml"
+                    ansible.extra_vars = {
+                        node_ip: "10.0.10.41",
+                    }
+                end
+            end
+            if servers["type"] == "master"
+                s.vm.provision "ansible" do |ansible|
+                    ansible.limit = "all"
+                    ansible.playbook = "../masters-playbook.yml"
+                    ansible.extra_vars = {
+                        node_ip: "10.0.10.#{s + 41}",
+                    }
                 end
             end
          end
       end
-  end
+   end
 end

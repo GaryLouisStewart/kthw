@@ -1,0 +1,89 @@
+- name: Install preliminary packages
+  apt:
+    name: "{{ prebuild_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Add an apt-signing key for docker
+  apt_key:
+   url: "{{ docker_apt_key }}"
+   state: present
+
+- name: Add Apt repository for stable version
+  apt_repository:
+   repo: "{{ docker_apt_repo }}"
+   state: present
+
+- name: Install docker and it's dependencies
+  apt:
+   name: "{{ docker_packages }}"
+   state: present
+   update_cache: yes
+   notify:
+   - docker status
+
+- name: Add vagrant user to docker group
+  user:
+   name: vagrant
+   group: docker
+
+- name: Remove swap file from /etc/fstab
+  mount:
+   name: "{{ item }}"
+   fstype: swap
+   state: absent
+  with_items:
+    - swap
+    - none
+
+- name: Disable swap
+  command: swapoff -a
+  when: ansible_swaptotal_mb> 0
+
+ - name: Add an apt signing key for Kubernetes
+    apt_key:
+      url: "{{ kubernetes_apt_key }}"
+      state: present
+
+  - name: Adding apt repository for Kubernetes
+    apt_repository:
+      repo: "{{ kubernetes_apt_repo }}"
+      state: present
+      filename: kubernetes.list
+
+  - name: Install Kubernetes binaries
+    apt:
+      name: "{{ kubernetes_packages }}"
+      state: present
+      update_cache: yes
+
+  - name: Configure node ip
+    lineinfile:
+      path: /etc/default/kubelet
+      line: KUBELET_EXTRA_ARGS=--node-ip={{ node_ip }}
+
+  - name: Restart kubelet
+    service:
+      name: kubelet
+      daemon_reload: yes
+
+  - name: Initialize the Kubernetes cluster using kubeadm
+    command: kubeadm init --apiserver-advertise-address="10.0.10.41" --apiserver-cert-extra-sans="10.0.10.41"  --node-name k8s-master --pod-network-cidr=192.168.0.0/16
+
+  - name: Setup kubeconfig for vagrant user
+    command: "{{ item }}"
+    with_items:
+     - mkdir -p /home/vagrant/.kube
+     - cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+     - chown vagrant:vagrant /home/vagrant/.kube/config
+
+  - name: Install calico pod network
+    become: false
+    command: kubectl create -f https://docs.projectcalico.org/v3.4/getting-started/kubernetes/installation/hosted/calico.yaml
+
+  - name: Generate join command
+    command: kubeadm token create --print-join-command
+    register: join_command
+
+  - name: Copy join command to local file
+    local_action: copy content="{{ join_command.stdout_lines[0] }}" dest="./join-command"
