@@ -1,23 +1,22 @@
----
-- prebuild_packages:
+prebuild_packages:
     - apt-transport-https
     - ca-certificates
     - curl
     - gnupg-agent
     - software-properties-common
 
-- docker_apt_key: "https://download.docker.com/linux/debian/gpg"
-- docker_apt_repo: "deb [arch=amd64] https://download.docker.com/linux/debian trusty stable"
+docker_apt_key: https://download.docker.com/linux/debian/gpg
+docker_apt_repo: deb [arch=amd64] https://download.docker.com/linux/debian/ stretch stable
 
-- docker_packages:
+docker_packages:
     - docker-ce
     - docker-ce-cli
     - containerd.io
 
-- kubernetes_apt_key: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
-- kuberentes_apt_repo: "deb https://apt.kubernetes.io/ kubernetes-xenial main"
+kubernetes_apt_key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+kuberentes_apt_repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
 
-- kubernetes_packages:
+kubernetes_packages:
     - kubelet
     - kubeadm
     - kubectl

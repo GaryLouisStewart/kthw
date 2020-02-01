@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: true
+  become: yes
   # pre_tasks:
   #   - name: Install packages for testing under docker
   #     apt:

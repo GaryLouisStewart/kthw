@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# bootstraps the two networks that are needed for our vagrant setup.
+# bootstraps the two networks that are needed for our vagrant setup and setup the nfs packages that are required for vagrant libvirt shared folders.
+# author @GaryLouisStewart
 
 declare -a networks=(
     kube-net
@@ -36,11 +37,18 @@ function list_networks() {
     virsh net-list
 }
 
+function setup_nfs() {
+    echo "setting up nfs mounts"
+    echo "Not Implemented yet........%"
+
+}
+
 function usage() {
     echo "Usage: [-c, --create, | -d, --delete,  | -h, --help]"
     echo "-c --create, creates a number of virtual networks that are needed for this demo"
     echo "-d --delete, deletes the virtual networks that were created for this demo"
     echo "-l --list, lists all networks that are currently present under libvirt/qemu/ using virsh"
+    echo "-n --setup-nfs, setup the automount, nfs and nfs-clients on the virtual machine"
     echo " -h  --help  display this help menu"
 }
 
@@ -55,6 +63,9 @@ in
     ;;
     -l| --list)
     list_networks
+    ;;
+    -n| --setup-nfs)
+    setup_nfs
     ;;
     -h| --help)
     usage

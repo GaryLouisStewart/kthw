@@ -26,10 +26,9 @@ Vagrant.configure(2) do |config|
                 libvirt.cpus = servers["cpu"]
                 libvirt.management_network_name = 'vagrant-mgmt'
                 libvirt.management_network_address = '192.168.77.1/24'
-            config.vm.synced_folder "src/", "/opt/synced"
+            config.vm.synced_folder "src/", "/opt/synced", type: "nfs", nfs_version: 4, "nfs_udp": false, mount_options: ["rw", "vers=4", "tcp", "nolock"]
             if servers["type"] == "nodes"
                 s.vm.provision "ansible" do |ansible|
-                    ansible.limit = "all"
                     ansible.playbook = "../node-playbook.yml"
                     ansible.extra_vars = {
                         node_ip: "10.0.10.#{s + 41}",
@@ -38,8 +37,7 @@ Vagrant.configure(2) do |config|
             end
             if servers["type"] == "master"
                 s.vm.provision "ansible" do |ansible|
-                    ansible.limit = "all"
-                    ansible.playbook = "../masters-playbook.yml"
+                    ansible.playbook = "../master-playbook.yml"
                     ansible.extra_vars = {
                         node_ip: "10.0.10.41",
                     }
