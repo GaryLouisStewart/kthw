@@ -14,7 +14,6 @@
   - Wait for cache updates
 
 
-
 - name: Add an apt-signing key for docker
   apt_key:
    url: "{{ docker_apt_key }}"
@@ -82,9 +81,6 @@
   until: apt_res is success
   notify:
   - Wait for cache updates
-  notify:
-  - apt-get update
-
 
 - name: Install Kubernetes binaries
   apt:

@@ -123,11 +123,5 @@
   register: join_command
 
 - name: Copy join command to file
-    template:
-      content: "{{ join_command.stdout_lines[0] }}"
-      dest: /tmp/join-command
-
-  - name: Fetch file to local
-    fetch:
-      src: /tmp/join-command
-      dest: /tmp/join-command
+  local_action: copy content="{{ join_command.stdout_lines[0] }}" dest="./join-command"
+  become: yes
