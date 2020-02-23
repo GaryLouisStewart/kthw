@@ -52,3 +52,8 @@ variable "bastion_count" {
     description = "The number of bastion host servers to spawn"
     default = 1
 }
+
+variable "asg" {
+    description = "A map of autoscaling group parameters"
+    type = "map"
+}
