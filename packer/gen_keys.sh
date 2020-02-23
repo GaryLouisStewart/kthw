@@ -40,6 +40,9 @@ generate|-g)
 delete|-d)
     delete_keys "$2"
     ;;
+help|-h)
+    usage
+    ;;
 
 *)
     echo "Invalid Usage: please run \$gen_keys.sh -h"

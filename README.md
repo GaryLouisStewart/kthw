@@ -15,9 +15,6 @@ I have automated most of this using a makefile to allow for very easy creates, u
 | worker_ami            | Build the worker ami for kubernetes                  |
 | master_ami            | Build the master ami for kubernetes                  |
 | ssh_cleanup           | Clean up the local ssh keys and aws keypairs         |
-| bastion_test          | Runs a terraform plan for the bastion_host           |
-| bastion_build         | Runs a terraform apply for the bastion_host          |
-| bastion_destroy       | Runs a terraform destroy for the bastion_host        |
 | kube_test             | Runs a terraform plan for the kube cluster           |
 | kube_build            | Runs a terraform apply for the kube cluster          |
 | kube_destroy          | Runs a terraform destroy for the kube cluster        |
@@ -37,8 +34,3 @@ I have automated most of this using a makefile to allow for very easy creates, u
 - ```make worker_ami```
 
 ![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/src/common/images/makefile-build-amis.png?raw=true)
-
-- [ ] make bastion_test to run a terraform plan in the bastion_hosts directorys
-- ``` make bastion_test ```
-
-![alt text](https://github.com/GaryLouisStewart/kthw/blob/master/src/common/images/make_test_bastion.png?raw=true)
