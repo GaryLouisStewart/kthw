@@ -103,3 +103,38 @@ variable "master_node_count" {
     description = "The number of master nodes to create"
     default = 1
 }
+
+variable "bastion_asg" {
+    description = "a map of values that apply to the bastion host asg"
+    default = {}
+}
+
+variable "launch_config" {
+    description = "A map of values that apply to the launch config for the bastion hosts"
+    default = {}
+}
+
+variable "bastion_count" {
+    description = "The number of bastion host ec2 instances to create"
+    default = 1
+}
+
+variable "instance_type" {
+    description = "The instance type to use for the bastion nodes"
+    default = "t2.micro"
+}
+
+variable "bastion_ami" {
+    description = "The Ami to use for the bastion hosts instance"
+    default = ""
+}
+
+variable "create_asg" {
+    description = "whether to create our autoscaling group"
+    default = true
+}
+
+variable "bastion_subnets" {
+    description = "A list of CIDR ranges to use for the bastion host subnets"
+    default = []
+}

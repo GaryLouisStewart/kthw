@@ -19,7 +19,7 @@
         "Platform": "Ubuntu 16.04 xenial",
         "Application": "Kubernetes cluster",
         "Service": "kubernetes",
-        "Terraformed": "true",
+        "Terraformed": true,
         "Created_by": "Gary"
     },
 
@@ -35,6 +35,25 @@
     "subnet_kube_workers": ["10.0.3.0/24", "10.0.4.0/24"],
     "cluster_name": "kthw",
     "kubernetes_masters_ingress_cidr_range": ["0.0.0.0/0"],
-    "ingress_ports_kubernetes_masters": ["443"]
+    "ingress_ports_kubernetes_masters": ["443"],
+    "instance_type": "t2.micro",
+    "bastion_count": "2",
+    "bastion_ami": "ami-0517c2db07ca86c75",
 
+    "bastion_asg": {
+        "asg_max": 3,
+        "asg_min": 1,
+        "asg_desired": 2,
+        "health_check_type": "EC2",
+        "health_check_grace": 60
+    },
+
+    "bastion_subnets": ["10.0.32.0/20", "10.0.48.0/20"],
+
+    "launch_config": {
+        "root_vol_size": "20",
+        "root_vol_type": "gp2",
+        "root_vol_encrypted": true
+    },
+    "create_asg": 1
 }
