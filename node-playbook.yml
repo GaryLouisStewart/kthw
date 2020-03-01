@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  # pre_tasks:
+  #   - name: Install packages for testing under docker
+  #     apt:
+  #       name: "{{ item }}"
+  #       state: present
+  #     with_items:
+  #       - selinux-policy
+  #       - libselinux-python
+  #       - openssh-server
+  #       - which
+  roles:
+    - role: kube-nodes

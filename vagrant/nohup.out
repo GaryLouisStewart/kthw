@@ -1,0 +1,598 @@
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.intellij.ide.ClassUtilCore to field sun.net.www.protocol.jar.JarFileFactory.fileCache
+WARNING: Please consider reporting this to the maintainers of com.intellij.ide.ClassUtilCore
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2020-02-14 23:34:07,227 [  51509]   WARN - llij.ide.plugins.PluginManager - TFS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - CVS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - Subversion not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - Tensor Dev Branch Creator not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - Material Theme UI not loaded: since build 192.6262.7 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - The Doki-Doki Theme not loaded: since build 192.6262.58 > PC-192.5728.105 
+2020-02-14 23:34:07,228 [  51510]   WARN - llij.ide.plugins.PluginManager - Image Icon Viewer not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,229 [  51511]   WARN - llij.ide.plugins.PluginManager - Task Management not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,229 [  51511]   WARN - llij.ide.plugins.PluginManager - HumpTransferNew not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,229 [  51511]   WARN - llij.ide.plugins.PluginManager - Certificate Decoder not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - Docker not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - Gherkin not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - FRC Project Manager [UNOFFICIAL] not loaded: since build 192.7142.36 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - Socket Client not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - Codeseek developer friendly search not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - Grammar-Kit Folder not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,230 [  51512]   WARN - llij.ide.plugins.PluginManager - IDETalk not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Settings Repository not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - XPathView + XSLT not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - yFiles not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Apache config (.htaccess) not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Handlebars/Mustache not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Ini not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Puppet not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,231 [  51513]   WARN - llij.ide.plugins.PluginManager - Rust not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Go Template not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Properties not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - EditorConfig not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - ClangFormat not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Tailwind Formatter not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Phing not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - File Watchers not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Bazel not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,232 [  51514]   WARN - llij.ide.plugins.PluginManager - Apache Camel IDEA Plugin not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Custom Postfix Templates not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Hunspell not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Ambient not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Code Notes not loaded: since build 192.6603.28 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Performance Testing not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Packages for Apex not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - License Generator not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Submit to INGInious not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-14 23:34:07,233 [  51515]   WARN - llij.ide.plugins.PluginManager - Rookout-Python not loaded: since build 192.6603.28 > PC-192.5728.105 
+2020-02-14 23:35:23,169 [ 127451]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-02-14 23:35:23,170 [ 127452]   WARN - .skeletons.PySkeletonRefresher - 3 modules failed in 1 interpreter. <a href="#">Details...</a> 
+2020-02-14 23:35:23,170 [ 127452]   WARN - .skeletons.PySkeletonRefresher - Failed modules 
+2020-02-14 23:35:23,170 [ 127452]   WARN - .skeletons.PySkeletonRefresher - libdnf._ 
+2020-02-14 23:35:23,170 [ 127452]   WARN - .skeletons.PySkeletonRefresher - lxml.builder 
+2020-02-14 23:35:23,170 [ 127452]   WARN - .skeletons.PySkeletonRefresher - pcardext 
+2020-02-15 00:38:54,143 [3938425]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 00:38:54,143 [3938425]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 13:40:05,294 [50809576]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 13:40:05,294 [50809576]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 13:42:25,436 [50949718]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 13:42:25,436 [50949718]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 13:43:15,703 [50999985]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 13:43:15,703 [50999985]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 13:46:09,708 [51173990]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'test' content in Run tool window to avoid focus-related problems. 
+2020-02-15 13:46:09,709 [51173991]   WARN - j.openapi.wm.impl.IdeFrameImpl - test tool window - parent container is hidden 
+2020-02-15 13:53:51,422 [51635704]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'test' content in Run tool window to avoid focus-related problems. 
+2020-02-15 13:53:51,422 [51635704]   WARN - j.openapi.wm.impl.IdeFrameImpl - test tool window - parent container is hidden 
+2020-02-15 14:05:04,488 [52308770]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Debug tool window to avoid focus-related problems. 
+2020-02-15 14:05:04,488 [52308770]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 14:16:13,146 [52977428]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 14:16:13,147 [52977429]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 14:17:27,423 [53051705]   WARN - penapi.wm.impl.GlobalMenuLinux - can't obtain XID of window: com.intellij.openapi.ui.FrameWrapper$MyJFrame[frame0,100,127,1720x853,invalid,hidden,layout=java.awt.BorderLayout,title=Comparison Failure (test_character_counter),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=,rootPaneCheckingEnabled=true], skip global menu unbinding 
+2020-02-15 14:32:24,060 [53948342]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests for test_charactercounter.TestCharacterCount' content in Run tool window to avoid focus-related problems. 
+2020-02-15 14:32:24,060 [53948342]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests for test_charactercounter.TestCharacterCount tool window - parent container is hidden 
+2020-02-15 14:47:04,087 [54828369]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests for test_charactercounter.TestCharacterCount' content in Run tool window to avoid focus-related problems. 
+2020-02-15 14:47:04,088 [54828370]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests for test_charactercounter.TestCharacterCount tool window - parent container is hidden 
+2020-02-15 14:48:56,118 [54940400]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Debug tool window to avoid focus-related problems. 
+2020-02-15 14:48:56,118 [54940400]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 14:56:36,167 [55400449]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_charactercounter.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 14:56:36,167 [55400449]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_charactercounter.py tool window - parent container is hidden 
+2020-02-15 14:57:51,257 [55475539]   WARN - penapi.wm.impl.GlobalMenuLinux - can't obtain XID of window: com.intellij.openapi.ui.FrameWrapper$MyJFrame[frame1,100,127,1720x853,invalid,hidden,layout=java.awt.BorderLayout,title=Comparison Failure (test_character_counter),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=,rootPaneCheckingEnabled=true], skip global menu unbinding 
+2020-02-15 17:34:55,088 [64899370]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in remove_characters.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 17:34:55,088 [64899370]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in remove_characters.py tool window - parent container is hidden 
+2020-02-15 18:13:37,189 [67221471]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in remove_characters.py' content in Run tool window to avoid focus-related problems. 
+2020-02-15 18:13:37,189 [67221471]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in remove_characters.py tool window - parent container is hidden 
+2020-02-15 18:19:38,398 [67582680]  ERROR - .execution.impl.RunManagerImpl - Python tests.Unittests in replace_characters.py must be added before selecting 
+java.lang.Throwable: Python tests.Unittests in replace_characters.py must be added before selecting
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:145)
+	at com.intellij.execution.impl.RunManagerImpl.setSelectedConfiguration(RunManagerImpl.kt:444)
+	at com.intellij.execution.actions.RunContextAction.perform(RunContextAction.java:53)
+	at com.intellij.execution.actions.BaseRunConfigurationAction.actionPerformed(BaseRunConfigurationAction.java:161)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$1.run(ActionUtil.java:265)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAware(ActionUtil.java:282)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.lambda$actionPerformed$0(ActionMenuItem.java:292)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.runOnOwnContext(FocusManagerImpl.java:265)
+	at com.intellij.openapi.wm.impl.IdeFocusManagerImpl.runOnOwnContext(IdeFocusManagerImpl.java:107)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.actionPerformed(ActionMenuItem.java:282)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.lambda$fireActionPerformed$0(ActionMenuItem.java:111)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.fireActionPerformed(ActionMenuItem.java:111)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.doClick(BegMenuItemUI.java:525)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.access$300(BegMenuItemUI.java:36)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI$MyMouseInputHandler.mouseReleased(BegMenuItemUI.java:547)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6651)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6416)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5026)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:778)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:751)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:749)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:748)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:818)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-15 18:19:38,404 [67582686]  ERROR - .execution.impl.RunManagerImpl - PyCharm 2019.2  Build #PC-192.5728.105 
+2020-02-15 18:19:38,405 [67582687]  ERROR - .execution.impl.RunManagerImpl - JDK: 11.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-02-15 18:19:38,405 [67582687]  ERROR - .execution.impl.RunManagerImpl - OS: Linux 
+2020-02-15 18:19:38,456 [67582738]  ERROR - .execution.impl.RunManagerImpl - Last Action: RunClass 
+2020-02-15 18:19:44,568 [67588850]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in replace_characters.py' content in Debug tool window to avoid focus-related problems. 
+2020-02-15 18:19:44,568 [67588850]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in replace_characters.py tool window - parent container is hidden 
+2020-02-15 22:32:29,688 [82753970]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in '__init__' content in Run tool window to avoid focus-related problems. 
+2020-02-15 22:32:29,689 [82753971]   WARN - j.openapi.wm.impl.IdeFrameImpl - __init__ tool window - parent container is hidden 
+2020-02-15 23:04:41,655 [84685937]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in '__init__' content in Run tool window to avoid focus-related problems. 
+2020-02-15 23:04:41,655 [84685937]   WARN - j.openapi.wm.impl.IdeFrameImpl - __init__ tool window - parent container is hidden 
+2020-02-16 10:33:18,535 [126002817]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in replace_characters.py' content in Debug tool window to avoid focus-related problems. 
+2020-02-16 10:33:18,536 [126002818]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in replace_characters.py tool window - parent container is hidden 
+2020-02-16 10:33:19,340 [126003622]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Project' content in TODO tool window to avoid focus-related problems. 
+2020-02-16 10:33:19,340 [126003622]   WARN - j.openapi.wm.impl.IdeFrameImpl - Project tool window - parent container is hidden 
+2020-02-16 10:33:21,962 [126006244]  ERROR - terminal.emulator.JediEmulator - Error processing OSC 777;notify;Command completed;vagrant destroy -f \ 
+2020-02-16 10:33:21,963 [126006245]  ERROR - terminal.emulator.JediEmulator - Error processing OSC 777;precmd\ 
+2020-02-16 10:33:22,945 [126007227]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'test_identify_number_types' content in Run tool window to avoid focus-related problems. 
+2020-02-16 10:33:22,945 [126007227]   WARN - j.openapi.wm.impl.IdeFrameImpl - test_identify_number_types tool window - parent container is hidden 
+2020-02-16 10:33:36,043 [126020325]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'test_identify_number_types' content in Run tool window to avoid focus-related problems. 
+2020-02-16 10:33:36,043 [126020325]   WARN - j.openapi.wm.impl.IdeFrameImpl - test_identify_number_types tool window - parent container is hidden 
+2020-02-16 10:35:05,416 [126109698]  ERROR - .execution.impl.RunManagerImpl - Python tests.Unittests in test_identify_number_types.py must be added before selecting 
+java.lang.Throwable: Python tests.Unittests in test_identify_number_types.py must be added before selecting
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:145)
+	at com.intellij.execution.impl.RunManagerImpl.setSelectedConfiguration(RunManagerImpl.kt:444)
+	at com.intellij.execution.actions.RunContextAction.perform(RunContextAction.java:53)
+	at com.intellij.execution.actions.BaseRunConfigurationAction.actionPerformed(BaseRunConfigurationAction.java:161)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$1.run(ActionUtil.java:265)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAware(ActionUtil.java:282)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.lambda$actionPerformed$0(ActionMenuItem.java:292)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.runOnOwnContext(FocusManagerImpl.java:265)
+	at com.intellij.openapi.wm.impl.IdeFocusManagerImpl.runOnOwnContext(IdeFocusManagerImpl.java:107)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.actionPerformed(ActionMenuItem.java:282)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.lambda$fireActionPerformed$0(ActionMenuItem.java:111)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.fireActionPerformed(ActionMenuItem.java:111)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.doClick(BegMenuItemUI.java:525)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.access$300(BegMenuItemUI.java:36)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI$MyMouseInputHandler.mouseReleased(BegMenuItemUI.java:547)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6651)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6416)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5026)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:778)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:751)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:749)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:748)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:818)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-16 10:35:05,416 [126109698]  ERROR - .execution.impl.RunManagerImpl - PyCharm 2019.2  Build #PC-192.5728.105 
+2020-02-16 10:35:05,416 [126109698]  ERROR - .execution.impl.RunManagerImpl - JDK: 11.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-02-16 10:35:05,417 [126109699]  ERROR - .execution.impl.RunManagerImpl - OS: Linux 
+2020-02-16 10:35:05,417 [126109699]  ERROR - .execution.impl.RunManagerImpl - Last Action: RunClass 
+2020-02-16 10:36:52,963 [126217245]  ERROR - .execution.impl.RunManagerImpl - Python tests.Unittests in test_identify_number_types.py must be added before selecting 
+java.lang.Throwable: Python tests.Unittests in test_identify_number_types.py must be added before selecting
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:145)
+	at com.intellij.execution.impl.RunManagerImpl.setSelectedConfiguration(RunManagerImpl.kt:444)
+	at com.intellij.execution.actions.RunContextAction.perform(RunContextAction.java:53)
+	at com.intellij.execution.actions.BaseRunConfigurationAction.actionPerformed(BaseRunConfigurationAction.java:161)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$1.run(ActionUtil.java:265)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAware(ActionUtil.java:282)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.lambda$actionPerformed$0(ActionMenuItem.java:292)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.runOnOwnContext(FocusManagerImpl.java:265)
+	at com.intellij.openapi.wm.impl.IdeFocusManagerImpl.runOnOwnContext(IdeFocusManagerImpl.java:107)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.actionPerformed(ActionMenuItem.java:282)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.lambda$fireActionPerformed$0(ActionMenuItem.java:111)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.fireActionPerformed(ActionMenuItem.java:111)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.doClick(BegMenuItemUI.java:525)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.access$300(BegMenuItemUI.java:36)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI$MyMouseInputHandler.mouseReleased(BegMenuItemUI.java:547)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6651)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6416)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5026)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:778)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:751)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:749)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:748)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:818)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-16 10:36:52,964 [126217246]  ERROR - .execution.impl.RunManagerImpl - PyCharm 2019.2  Build #PC-192.5728.105 
+2020-02-16 10:36:52,965 [126217247]  ERROR - .execution.impl.RunManagerImpl - JDK: 11.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-02-16 10:36:52,965 [126217247]  ERROR - .execution.impl.RunManagerImpl - OS: Linux 
+2020-02-16 10:36:52,965 [126217247]  ERROR - .execution.impl.RunManagerImpl - Last Action: RunClass 
+2020-02-16 10:40:48,495 [126452777]  ERROR - .execution.impl.RunManagerImpl - Python tests.Unittests in test_identify_number_types.py must be added before selecting 
+java.lang.Throwable: Python tests.Unittests in test_identify_number_types.py must be added before selecting
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:145)
+	at com.intellij.execution.impl.RunManagerImpl.setSelectedConfiguration(RunManagerImpl.kt:444)
+	at com.intellij.execution.actions.RunContextAction.perform(RunContextAction.java:53)
+	at com.intellij.execution.actions.BaseRunConfigurationAction.actionPerformed(BaseRunConfigurationAction.java:161)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$1.run(ActionUtil.java:265)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAware(ActionUtil.java:282)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.lambda$actionPerformed$0(ActionMenuItem.java:292)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.runOnOwnContext(FocusManagerImpl.java:265)
+	at com.intellij.openapi.wm.impl.IdeFocusManagerImpl.runOnOwnContext(IdeFocusManagerImpl.java:107)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.actionPerformed(ActionMenuItem.java:282)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.lambda$fireActionPerformed$0(ActionMenuItem.java:111)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.fireActionPerformed(ActionMenuItem.java:111)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.doClick(BegMenuItemUI.java:525)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.access$300(BegMenuItemUI.java:36)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI$MyMouseInputHandler.mouseReleased(BegMenuItemUI.java:547)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6651)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6416)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5026)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:778)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:751)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:749)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:748)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:818)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-16 10:40:48,496 [126452778]  ERROR - .execution.impl.RunManagerImpl - PyCharm 2019.2  Build #PC-192.5728.105 
+2020-02-16 10:40:48,496 [126452778]  ERROR - .execution.impl.RunManagerImpl - JDK: 11.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-02-16 10:40:48,496 [126452778]  ERROR - .execution.impl.RunManagerImpl - OS: Linux 
+2020-02-16 10:40:48,497 [126452779]  ERROR - .execution.impl.RunManagerImpl - Last Action: RunClass 
+2020-02-16 10:43:27,405 [126611687]  ERROR - .execution.impl.RunManagerImpl - Python tests.Unittests in test_identify_number_types.py must be added before selecting 
+java.lang.Throwable: Python tests.Unittests in test_identify_number_types.py must be added before selecting
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:145)
+	at com.intellij.execution.impl.RunManagerImpl.setSelectedConfiguration(RunManagerImpl.kt:444)
+	at com.intellij.execution.actions.RunContextAction.perform(RunContextAction.java:53)
+	at com.intellij.execution.actions.BaseRunConfigurationAction.actionPerformed(BaseRunConfigurationAction.java:161)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$1.run(ActionUtil.java:265)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAware(ActionUtil.java:282)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.lambda$actionPerformed$0(ActionMenuItem.java:292)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.runOnOwnContext(FocusManagerImpl.java:265)
+	at com.intellij.openapi.wm.impl.IdeFocusManagerImpl.runOnOwnContext(IdeFocusManagerImpl.java:107)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem$ActionTransmitter.actionPerformed(ActionMenuItem.java:282)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.lambda$fireActionPerformed$0(ActionMenuItem.java:111)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.fireActionPerformed(ActionMenuItem.java:111)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.doClick(BegMenuItemUI.java:525)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI.access$300(BegMenuItemUI.java:36)
+	at com.intellij.ui.plaf.beg.BegMenuItemUI$MyMouseInputHandler.mouseReleased(BegMenuItemUI.java:547)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6651)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6416)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5026)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4858)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:778)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:751)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:749)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:748)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:818)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-16 10:43:27,406 [126611688]  ERROR - .execution.impl.RunManagerImpl - PyCharm 2019.2  Build #PC-192.5728.105 
+2020-02-16 10:43:27,406 [126611688]  ERROR - .execution.impl.RunManagerImpl - JDK: 11.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-02-16 10:43:27,406 [126611688]  ERROR - .execution.impl.RunManagerImpl - OS: Linux 
+2020-02-16 10:43:27,407 [126611689]  ERROR - .execution.impl.RunManagerImpl - Last Action: RunClass 
+2020-02-16 13:31:42,322 [136706604]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'character_conversion' content in Run tool window to avoid focus-related problems. 
+2020-02-16 13:31:42,322 [136706604]   WARN - j.openapi.wm.impl.IdeFrameImpl - character_conversion tool window - parent container is hidden 
+2020-02-16 18:09:53,358 [153397640]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'Unittests in test_character_conversion.py' content in Run tool window to avoid focus-related problems. 
+2020-02-16 18:09:53,358 [153397640]   WARN - j.openapi.wm.impl.IdeFrameImpl - Unittests in test_character_conversion.py tool window - parent container is hidden 
+2020-02-16 19:54:50,436 [159694718]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'character_conversion' content in Run tool window to avoid focus-related problems. 
+2020-02-16 19:54:50,436 [159694718]   WARN - j.openapi.wm.impl.IdeFrameImpl - character_conversion tool window - parent container is hidden 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - TFS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - CVS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - Subversion not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - Tensor Dev Branch Creator not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - Material Theme UI not loaded: since build 192.6262.7 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - The Doki-Doki Theme not loaded: since build 192.6262.58 > PC-192.5728.105 
+2020-02-16 21:28:40,652 [165324934]   WARN - llij.ide.plugins.PluginManager - Image Icon Viewer not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - Task Management not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - HumpTransferNew not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - Certificate Decoder not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - Docker not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - Gherkin not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - FRC Project Manager [UNOFFICIAL] not loaded: since build 192.7142.36 > PC-192.5728.105 
+2020-02-16 21:28:40,653 [165324935]   WARN - llij.ide.plugins.PluginManager - Socket Client not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Codeseek developer friendly search not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Grammar-Kit Folder not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - IDETalk not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Settings Repository not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - XPathView + XSLT not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - yFiles not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Apache config (.htaccess) not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Handlebars/Mustache not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Ini not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Puppet not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Rust not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Go Template not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Properties not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - EditorConfig not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - ClangFormat not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,654 [165324936]   WARN - llij.ide.plugins.PluginManager - Tailwind Formatter not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Phing not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - File Watchers not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Bazel not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Apache Camel IDEA Plugin not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Custom Postfix Templates not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Hunspell not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Ambient not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Code Notes not loaded: since build 192.6603.28 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Performance Testing not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Packages for Apex not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - License Generator not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Submit to INGInious not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-16 21:28:40,655 [165324937]   WARN - llij.ide.plugins.PluginManager - Rookout-Python not loaded: since build 192.6603.28 > PC-192.5728.105 
+2020-02-17 21:44:52,175 [252696457]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'program' content in Debug tool window to avoid focus-related problems. 
+2020-02-17 21:44:52,176 [252696458]   WARN - j.openapi.wm.impl.IdeFrameImpl - program tool window - parent container is hidden 
+2020-02-17 21:44:57,323 [252701605]   WARN - j.openapi.wm.impl.IdeFrameImpl - Set preferredFocusableComponent in 'program' content in Run tool window to avoid focus-related problems. 
+2020-02-17 21:44:57,323 [252701605]   WARN - j.openapi.wm.impl.IdeFrameImpl - program tool window - parent container is hidden 
+2020-02-17 23:00:20,352 [257224634]   WARN - n.process.BaseOSProcessHandler - Process hasn't generated any output for a long time.
+If it's a long-running mostly idle daemon process, consider overriding OSProcessHandler#readerOptions with 'BaseOutputReader.Options.forMostlySilentProcess()' to reduce CPU usage.
+Command line: /usr/bin/python3.7 /home/3XP1017/PROJECTS/python-devops/edureka_module_2_gary_louis_stewart/part_3/temperature.py 
+java.lang.Throwable: Process creation:
+	at com.intellij.execution.process.BaseOSProcessHandler.<init>(BaseOSProcessHandler.java:33)
+	at com.intellij.execution.process.OSProcessHandler.<init>(OSProcessHandler.java:151)
+	at com.intellij.execution.process.OSProcessHandler.<init>(OSProcessHandler.java:38)
+	at com.intellij.execution.process.KillableProcessHandler.<init>(KillableProcessHandler.java:35)
+	at com.intellij.execution.process.ColoredProcessHandler.<init>(ColoredProcessHandler.java:24)
+	at com.intellij.execution.process.KillableColoredProcessHandler.<init>(KillableColoredProcessHandler.java:38)
+	at com.jetbrains.python.run.PythonProcessHandler.<init>(PythonProcessHandler.java:37)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:37)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:42)
+	at com.jetbrains.python.run.PythonCommandLineState.doCreateProcess(PythonCommandLineState.java:289)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.doCreateProcess(PythonScriptCommandLineState.java:202)
+	at com.jetbrains.python.run.PythonCommandLineState.lambda$getDefaultPythonProcessStarter$0(PythonCommandLineState.java:239)
+	at com.jetbrains.python.run.PythonCommandLineState.startProcess(PythonCommandLineState.java:219)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:145)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.execute(PythonScriptCommandLineState.java:109)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:139)
+	at com.jetbrains.python.run.PythonRunner.doExecute(PythonRunner.java:52)
+	at com.intellij.execution.runners.GenericProgramRunner$execute$$inlined$runProfileStarter$1.executeAsync(GenericProgramRunner.kt:56)
+	at com.intellij.execution.runners.GenericProgramRunnerKt$startRunProfile$$inlined$runProfileStarter$1.executeAsync(GenericProgramRunner.kt:56)
+	at com.intellij.execution.impl.ExecutionManagerKtImpl$startRunProfile$startRunnable$1.run(ExecutionManagerKtImpl.kt:63)
+	at com.intellij.openapi.application.TransactionGuardImpl.runSyncTransaction(TransactionGuardImpl.java:82)
+	at com.intellij.openapi.application.TransactionGuardImpl.lambda$submitTransaction$1(TransactionGuardImpl.java:106)
+	at com.intellij.openapi.application.TransactionGuardImpl.submitTransaction(TransactionGuardImpl.java:115)
+	at com.intellij.openapi.application.TransactionGuard.submitTransaction(TransactionGuard.java:121)
+	at com.intellij.execution.impl.ExecutionManagerKtImpl$startRunProfile$2.run(ExecutionManagerKtImpl.kt:116)
+	at com.intellij.execution.impl.ExecutionManagerImpl.compileAndRun(ExecutionManagerImpl.java:278)
+	at com.intellij.execution.impl.ExecutionManagerKtImpl.startRunProfile(ExecutionManagerKtImpl.kt:116)
+	at com.intellij.execution.runners.GenericProgramRunnerKt.startRunProfile(GenericProgramRunner.kt:50)
+	at com.intellij.execution.runners.GenericProgramRunner.execute(GenericProgramRunner.kt:17)
+	at com.intellij.execution.runners.BaseProgramRunner.execute(BaseProgramRunner.java:46)
+	at com.intellij.execution.runners.BaseProgramRunner.execute(BaseProgramRunner.java:35)
+	at com.intellij.execution.ProgramRunnerUtil.executeConfigurationAsync(ProgramRunnerUtil.java:92)
+	at com.intellij.execution.ProgramRunnerUtil.executeConfiguration(ProgramRunnerUtil.java:40)
+	at com.intellij.execution.impl.ExecutionManagerImpl.restart(ExecutionManagerImpl.java:94)
+	at com.intellij.execution.impl.ExecutionManagerImpl.access$300(ExecutionManagerImpl.java:45)
+	at com.intellij.execution.impl.ExecutionManagerImpl$3.run(ExecutionManagerImpl.java:470)
+	at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:231)
+	at com.intellij.util.Alarm$Request.runSafely(Alarm.java:368)
+	at com.intellij.util.Alarm$Request.run(Alarm.java:355)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:224)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:312)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.doRun(LaterInvocator.java:433)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.runNextEvent(LaterInvocator.java:416)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.run(LaterInvocator.java:399)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:822)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-22 12:18:55,856 [650740138]   WARN - tartup.impl.StartupManagerImpl - /home/3XP1017/WORK/kthw/.idea 
+java.io.FileNotFoundException: /home/3XP1017/WORK/kthw/.idea
+	at com.intellij.openapi.util.io.FileUtil.isFileSystemCaseSensitive(FileUtil.java:1467)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.checkFsSanity(StartupManagerImpl.java:329)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.runPostStartupActivities(StartupManagerImpl.java:237)
+	at com.intellij.openapi.project.impl.ProjectManagerImpl.lambda$null$6(ProjectManagerImpl.java:411)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:312)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.doRun(LaterInvocator.java:433)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.runNextEvent(LaterInvocator.java:416)
+	at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.run(LaterInvocator.java:399)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:873)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:822)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:461)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:704)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:460)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - TFS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - CVS not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - Subversion not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - Tensor Dev Branch Creator not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - Material Theme UI not loaded: since build 192.6262.7 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - The Doki-Doki Theme not loaded: since build 192.6262.58 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - Image Icon Viewer not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - Task Management not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,712 [650745994]   WARN - llij.ide.plugins.PluginManager - HumpTransferNew not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Certificate Decoder not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Docker not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Gherkin not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - FRC Project Manager [UNOFFICIAL] not loaded: since build 192.7142.36 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Socket Client not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Codeseek developer friendly search not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Grammar-Kit Folder not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - IDETalk not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - Settings Repository not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - XPathView + XSLT not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,713 [650745995]   WARN - llij.ide.plugins.PluginManager - yFiles not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Apache config (.htaccess) not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Handlebars/Mustache not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Ini not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Puppet not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Rust not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Go Template not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Properties not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - EditorConfig not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - ClangFormat not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Tailwind Formatter not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Phing not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - File Watchers not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,714 [650745996]   WARN - llij.ide.plugins.PluginManager - Bazel not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Apache Camel IDEA Plugin not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Custom Postfix Templates not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Hunspell not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Ambient not loaded: since build 192.6262 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Code Notes not loaded: since build 192.6603.28 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Performance Testing not loaded: since build 192.6603 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Packages for Apex not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - License Generator not loaded: since build 192.6817 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Submit to INGInious not loaded: since build 192.7142 > PC-192.5728.105 
+2020-02-22 12:19:01,715 [650745997]   WARN - llij.ide.plugins.PluginManager - Rookout-Python not loaded: since build 192.6603.28 > PC-192.5728.105 

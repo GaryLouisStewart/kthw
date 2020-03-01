@@ -1,0 +1,55 @@
+N = 2
+require 'yaml'
+servers = YAML.load_file('machines.yaml')
+Vagrant.configure("2") do |config|
+    config.ssh.insert_key = false
+    config.vm.provider :libvirt do |libvirt|
+        libvirt.driver = 'kvm'
+        libvirt.host = 'localhost'
+        libvirt.uri = 'qemu:///system'
+        libvirt.memory = servers["ram"]
+        libvirt.nested = true
+        libvirt.cpu_mode = "host-model"
+        libvirt.cpus = servers["cpu"]
+        libvirt.management_network_name = 'vagrant-mgmt'
+        libvirt.management_network_address = '192.168.77.1/24'
+    end
+
+
+# config.vm.synced_folder "src/", "/opt/synced", type: "nfs", nfs_version: 4, "nfs_udp": false, mount_options: ["rw", "vers=4", "tcp", "nolock"]
+    config.vm.define "k8s-master" do |master|
+        master.vm.box = servers["box"]
+        master.vm.hostname = servers["hostname_master"]
+        master.vm.network "private_network",
+            ip: servers["k8s_master_ip"],
+            :type => "dhcp",
+            :libvirt__network_name => "kube-net",
+            :libvirt__domain_name => "cka.local",
+        master.vm.provision "ansible" do |ansible|
+            ansible.playbook = "../master-playbook.yml"
+            ansible.ask_become_pass = true
+            ansible.extra_vars = {
+                node_ip: "10.0.10.41",
+            }
+        end
+    end
+
+    (1..N).each do |i|
+        config.vm.define "k8s-node-#{i}" do |node|
+            node.vm.box = servers["box"]
+            node.vm.hostname = servers["k8s_node_hostname"]
+            node.vm.network  "private_network",
+                ip: servers["k8s_node_ip"],
+                :type => "dhcp",
+                :libvirt__network_name => "kube-net",
+                :libvirt__domain_name => "cka.local",
+            node.vm.provision "ansibla" do |ansible|
+                ansible.playbook = "../master-playbook.yml"
+                ansible.ask_become_pass = true
+                ansible.extra_vars = {
+                    node_ip: "10.0.10.#{i + 41}",
+                }
+            end
+        end
+    end
+end

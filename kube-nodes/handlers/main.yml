@@ -1,0 +1,11 @@
+---
+# handlers file for kube-nodes
+- name: docker status
+  service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Wait for cache updates
+  become: yes
+  shell: while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;

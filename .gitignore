@@ -13,3 +13,4 @@ go.sum
 __pycache__
 boto3
 .test-data
+.vagrant

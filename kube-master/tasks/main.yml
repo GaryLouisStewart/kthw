@@ -1,0 +1,23 @@
+- name: Check os version and family
+  fail:
+      msg: "This role can only be run against Debian 9.9 stretch. {{ ansible_distribution }} {{ ansible_distribution_version }} is not supported."
+  when:
+      - ansible_os_family == 'Debian'
+      - ansible_distribution_version is version('9.9', '!=')
+  tags:
+      - always
+
+- name: Check ansible version
+  fail:
+      msg: You must use ansible 2.5 or greater
+  when: not ansible_version.full is version('2.5', '>=')
+  tags:
+      - always
+
+- name: Load in variables file
+  include_vars: "master-vars.yaml"
+
+- include: master-bootstrap.yml
+  tags:
+    - master-bootstrap
+    - always
