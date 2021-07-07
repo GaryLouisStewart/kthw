@@ -1,16 +1,70 @@
-# aws instances
-resource "aws_instance"  "bastion-instance" {
-    count                   = "${var.bastion_count}"
-    ami                     = "${var.bastion_ami}"
-    key_name                = "${var.ssh_keypair}"
-    instance_type           = "${var.instance_type}"
-    vpc_security_group_ids  = ["${aws_security_group.bastion-ssh.id}"]
-    tags = "${merge(map(
-        "Name", "Bastion host"
-    ), var.common_tags)}"
+# autoscaling groups.
 
+resource "aws_launch_configuration" "bastion_conf" {
+  name_prefix = "bastion-host-lc-"
+  image_id = "${var.bastion_ami}"
+  instance_type = "${var.instance_type}"
+  associate_public_ip_address = false
+  security_groups = ["${aws_security_group.bastion-ssh.id}"]
+  user_data = "${data.template_file.bastion-user-data_common.rendered}"
+  key_name = "${var.ssh_keypair}"
+    root_block_device {
+      volume_size = "${var.launch_config["root_vol_size"]}"
+      volume_type = "${var.launch_config["root_vol_type"]}}"
+      encrypted = "${var.launch_config["root_vol_encrypted"]}"
+    }
+
+    lifecycle {
+    create_before_destroy = true
+    }
 }
 
+resource "aws_autoscaling_group" "bastion-asg" {
+    count = "${var.create_asg ? 1 : 0}"
+    name = "bastion-host-asg"
+    launch_configuration = "${aws_launch_configuration.bastion_conf.id}"
+    availability_zones = ["${data.aws_availability_zones.available.names[0]}, ${data.aws_availability_zones.available.names[1]}"]
+    vpc_zone_identifier = ["${aws_subnet.bastion-public-subnet.count}"]
+    max_size = "${var.asg["asg_max"]}"
+    min_size = "${var.asg["asg_min"]}"
+    desired_capacity = "${var.asg["asg_desired"]}"
+    health_check_grace_period = "${var.asg["health_check_grace"]}"
+    health_check_type = "${var.asg["health_check_type"]}"
+
+    lifecycle {
+        create_before_destroy = true
+    }
+
+    tags = ["${merge(map(
+        "Name", "Bastion host",
+        "propagate_at_launch", "true"
+         ),  var.common_tags)}"]
+}
+
+resource "aws_iam_instance_profile" "bastion_profile" {
+  name = "test_profile"
+  role = "${aws_iam_role.bastion_role.name}"
+}
+
+resource "aws_iam_role" "bastion_role" {
+    name = "bastion_role"
+    path = "/"
+
+    assume_role_policy = "${file("${path.module}/templates/bastion-iam.tpl")}"
+}
+
+resource "aws_eip" "bastion-host" {
+    count = "${var.bastion_count}"
+    vpc = true
+
+    lifecycle {
+        create_before_destroy = true
+    }
+
+    tags = "${merge(map(
+        "Name", "Bastion host elastic ip address",
+    ), var.common_tags)}"
+}
 
 resource "aws_internet_gateway" "bastion" {
     vpc_id = "${var.target_vpc_id}"
@@ -59,7 +113,7 @@ resource "aws_security_group_rule" "bastion-ssh" {
     protocol                    = "tcp"
     security_group_id           = "${aws_security_group.bastion-ssh.id}"
     to_port                     = "443"
-    type                        = "ingress" 
+    type                        = "ingress"
 }
 
 resource "aws_security_group_rule" "bastion-to-kubernetes-workers" {
@@ -90,13 +144,3 @@ resource "aws_route" "bastion-administration" {
     destination_cidr_block      = "${element(var.cidr_range_bastion_access, count.index)}"
     depends_on                  = ["aws_route_table.bastion-hosts"]
 }
-
-
-# data sources
-
-
-data "http" "myipaddr" {
-  url = "http://ipv4.icanhazip.com"
-}
-
-data  "aws_availability_zones" "available" {}

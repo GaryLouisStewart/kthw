@@ -1,13 +1,18 @@
-module "kubernetes_bastion_hosts" {
-    source                        = "../modules/bastion-host"
-    bastion_ami                   = "${var.ami_master_node}"
-    target_vpc_id                 = "${module.ec2-cluster.vpc_id}"
-    target_security_group_id      = "${module.ec2-cluster.security_group_id}"
-    common_tags                   = "${var.common_tags}"
-    bastion_ssh_ingress           = "${var.kubernetes_masters_ingress_cidr_range}"
-    bastion_subnets               = ["10.0.5.0/24", "10.0.6.0/24"]
-    cidr_range_bastion_access     = ["0.0.0.0/0"]
-    ssh_keypair                   = "master-nodes"
+module "kubernetes_bastion_host" {
+    source = "../modules/bastion-host"
+    bastion_ami = "${var.bastion_ami}"
+    target_vpc_id = "${module.ec2-cluster.vpc_id}"
+    target_security_group_id = "${module.ec2-cluster.security_group_id}"
+    bastion_ssh_ingress = "${var.kubernetes_masters_ingress_cidr_range}"
+    bastion_subnets =  "${var.bastion_subnets}"
+    cidr_range_bastion_access = ["0.0.0.0/0"]
+    ssh_keypair = "bastion-nodes"
+    instance_type = "${var.instance_type}"
+    bastion_count = "${var.bastion_count}"
+    launch_config = "${var.launch_config}"
+    asg = "${var.bastion_asg}"
+    create_asg = "${var.create_asg}"
+    common_tags = "${var.common_tags}"
 }
 
 module "ec2-cluster" {

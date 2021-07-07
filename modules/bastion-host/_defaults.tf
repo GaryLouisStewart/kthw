@@ -52,3 +52,18 @@ variable "bastion_count" {
     description = "The number of bastion host servers to spawn"
     default = 1
 }
+
+variable "asg" {
+    description = "A map of autoscaling group parameters"
+    type = "map"
+}
+
+variable "launch_config" {
+    description = "A map of variables that apply to launch configuration"
+    type = "map"
+}
+
+variable "create_asg" {
+    description = "Create autoscaling group, defaults to yes"
+    default = true
+}

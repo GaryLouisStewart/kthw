@@ -34,6 +34,12 @@ function terraform_destroy() {
 	terraform destroy -var-file "$TF_VARS/common.json"
 }
 
+function terraform_debug_mode() {
+  echo "%....Running a terraform Plan now with debugging mode enabled....%"s
+  TF_LOG="debug"
+  terraform plan -var-file "$TF_VARS/common.json" -out=.logs/terraform-plan-log-"$DATE"
+}
+
 function terraform_output() {
     if [ "$#" -lt 2 ]; then
      echo "Please select a resource to output or see usage with tf_action -h"
@@ -53,6 +59,7 @@ function usage() {
     echo "  -d, --destory  runs a terraform destroy, [ \$tf_action -d ]"
     echo "  -o, --output   runs a terraform output, [ \$tf_action -o <resource-name> ]"
     echo "  -h, --help     display help, [ \$tf_action -h ]"
+    echo "  -pd, --debug    runs a terraform plan with debugging enabled e,g, [\$tf_action -pd]"
     exit 1
 }
 
@@ -73,6 +80,9 @@ in
     ;;
     -d|--destroy)
     terraform_destroy
+    ;;
+    -pd|--debug)
+    terraform_debug_mode
     ;;
     -o|--output)
     terraform_output "$1"

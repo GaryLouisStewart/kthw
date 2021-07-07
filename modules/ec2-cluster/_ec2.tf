@@ -163,9 +163,3 @@ resource "aws_security_group_rule" "kube_node_cluster_ingress_node_https" {
     to_port                  = 443
     type                     = "ingress"
 }
-
-data "http" "myipaddr" {
-  url = "http://ipv4.icanhazip.com"
-}
-
-data "aws_availability_zones" "available" {}
